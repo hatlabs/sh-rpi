@@ -39,7 +39,8 @@ baseurl: "/sh-rpi" # the subpath of your site, e.g. /blog
 #github_username:  jekyll
 
 # custom color scheme
-color_scheme: shrpi
+# (defined in _sass/color_schemes)
+color_scheme: hatlabs
 
 
 host: 0.0.0.0
@@ -61,6 +62,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - .bundle/
+  - "*.afdesign"
 
 
 # Enable or disable the site search

@@ -8,6 +8,35 @@ permalink: /
 
 # Introduction
 
+Sailor Hat for Raspberry Pi (SH-RPi for short) is a power management and NMEA 2000 interface board for boat use.
+It allows you to build boat servers running [Signal K](https://signalk.org), [OpenCPN](https://opencpn.org), or your own custom IoT software and power them directly from the boat's 12V or 24V network and interface safely with the boat's NMEA 2000 data network.
+
+![SH-RPi v1.0.0 rendering]({{site.baseurl}}/media/SH-RPi-1.0.0-render.jpg "SH-RPi v1.0.0 rendering"){:width="50%"}\\
+<a name="fig_sh-rpi-1.0.0-render"></a>*Sailor Hat for Raspberry Pi v1.0.0.*
+
+Central use cases include:
+
+- Safely power the computer using your boat's 12V or 24V power system.
+SH-RPi has a wide voltage range (8-32V) power input with additional filtering and surge protection.
+- Keep the server running during power glitches or brownouts.
+The integrated supercapacitor ensures that intermittent power outages are totally ignored.
+- Power even a Raspberry Pi 4B directly from the NMEA 2000 bus.
+SH-RPi includes a current limiting circuit that limits the maximum input current to approximately 0.8A.
+The supercapacitor provides ample peak power capability to run even power-hungry single-board computers with multiple peripheral devices such as a screen and an SSD drive.
+- Shut the server down safely when the power is switched off.
+The computer is informed about the power outage and the supercapacitor provides power while the computer shuts down in a controlled fashion.
+No more corrupted SD cards!
+- Interface the Raspberry Pi with the boat's NMEA 2000 network or an automotive CAN bus.
+SH-RPi includes an isolated NMEA 2000 interface that is compliant with the NMEA 2000 specification.
+- Keep the computer in time with the optional integrated real-time clock and a backup battery.
+- Reset the Raspberry Pi automatically if it has crashed.
+- Stack other Raspberry Pi hats on top of SH-RPi to further add or customize the functionality.
+SH-RPi has been designed to not interfere with other devices using the SPI data interface.
+- Don't disturb other boat navigation and safety systems.
+SH-RPi complies with the relevant European and maritime electromagnetic compatibility standards, ensuring that the device does not interfere with other sensitive devices such as the VHF radio or the GPS.
+
+Sailor Hat for Raspberry Pi is open hardware, licensed under the Creative Commons Attribution-ShareAlike 4.0 International license.
+You can create your own SH-ESP32 derivatives as long as you share them under similar terms!
 
 ## Getting the hardware
 

@@ -13,4 +13,4 @@ The pages are rendered using [Jekyll](https://jekyllrb.com) which is the standar
 The Jekyll theme in use is [Just the Docs](https://github.com/pmarsceill/just-the-docs).
 The site uses [kramdown](https://kramdown.gettalong.org/syntax.html) as its Markdown flavor.
 
-If you want to test your modifications locally, your easiest option is to run `./docker-jekyll bundle exec jekyll serve` in the cloned directory and then browse to [0.0.0.0:4000/sh-rpi](https://0.0.0.0:4000/sh-rpi). You must have Docker pre-installed.
+If you want to test your modifications locally, your easiest option is to run first `./docker-jekyll bundle` (one time only) and then `./docker-jekyll bundle exec jekyll serve` in the cloned directory and then browse to [0.0.0.0:4000/sh-rpi](https://0.0.0.0:4000/sh-rpi). You must have Docker pre-installed.

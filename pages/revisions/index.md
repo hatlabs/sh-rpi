@@ -22,5 +22,5 @@ This page documents different board revisions and provides links to the schemati
 
 First version sold at [hatlabs.fi](https://hatlabs.fi).
 
-TODO Schematics: [SH-RPi-1.0.0-schema.pdf](assets/SH-RPi-1.0.0-schema.pdf)
+Schematics: [SH-RPi-1.0.0-schema.pdf](assets/SH-RPi-1.0.0-schema.pdf)
 

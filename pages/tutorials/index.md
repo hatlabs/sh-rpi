@@ -7,4 +7,4 @@ has_children: true
 
 # Tutorials and example projects
 
-Some tutorials and example projects using the SH-RPi are given below.
+SH-RPi tutorials and example projects will be listed on this page.
