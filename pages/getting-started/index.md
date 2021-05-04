@@ -2,6 +2,7 @@
 layout: default
 title: Getting Started
 nav_order: 20
+has_children: true
 ---
 
 # Getting started
@@ -75,30 +76,13 @@ This will reduce the likelihood of the Raspberry Pi rattling around the enclosur
 ![Mounting suggestion](assets/Enclosure_mounting_top.jpg "Mounting suggestion"){:width="50%"}\\
 <a name="fig_mounting_suggestion"></a>*An example mounting of the SH-RPi in an enclosure.*
 
-### Internal wiring
+### Power and NMEA 2000 connections
 
-SH-RPi can be powered either using a dedicated power connector or via the NMEA 2000 network.
-If power is provided via the NMEA 2000 network, there must not be any galvanic wire connections to externally powered devices.
+SH-RPi can always be powered using a dedicated power connector.
 
-The following diagrams illustrated the valid powering schemes.
-In the diagrams, dashed lines illustrate the isolation barrier
+It is also possible to power the SH-RPi via the NMEA 2000 network, provided that there are no galvanic connections to external wired hardware. For details, refer to the [NMEA 2000 power](nmea2000-power/) page.
 
-![Powered externally](assets/Power-diagram-n2k-and-power.png "Powered externally")\\
-*Always OK: SH-RPi powered with a dedicated power cable.*
-
-![Powered via NMEA 2000 bus](assets/Power-diagram-pure-n2k.png "Powered via NMEA 2000 bus")\\
-*OK: SH-RPi powered via the NMEA 2000 network, no external connections.*
-
-![Powered externally, galvanic connections](assets/Power-diagram-unisolated-conx.png "Powered externally, galvanic connections")\\
-*OK: SH-RPi powered with a dedicated power cable and connected to external devices with a galvanic connection such as USB or unisolated RS-422.*
-
-![Powered via NMEA 2000 bus, isolated connections](assets/Power-diagram-isolated-conx.png "Powered via NMEA 2000 bus, isolated connections")\\
-*OK: SH-RPi powered via the NMEA 2000 network and connected to external devices with an isolated connection such as Ethernet or isolated NMEA 0183.*
-
-![Not permitted: powered via NMEA 2000 and galvanic connections](assets/Power-diagram-illegal.png "Not permitted: powered via NMEA 2000 and galvanic connections")\\
-*Not permitted: SH-RPi powered via the NMEA 2000 and connected to external devices with a galvanic connection. This setup will cause a lot of noise and may impact the reliability of the Raspberry Pi or other devices.*
-
-If power is provided via a dedicated power connector, solder the provided JST XH pigtail cable to the panel connector.
+If power is provided via a dedicated power connector, install a panel connector on the enclosure and solder the provided JST XH pigtail cable to the panel connector.
 
 ![Power connector example](assets/Power-conx-example-scaled.jpg "Power connector example"){:width="50%"}\\
 *JST XH pigtail soldered to an SP13 panel connector.*
