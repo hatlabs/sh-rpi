@@ -48,7 +48,7 @@ Different functional blocks of the Sailor Hat for Raspberry Pi are described bel
     - Communicates the SH-RPi status the the Raspberry Pi service over I2C
 5.  Step-up (boost) converter.
     The boost converter converts the 0.5-2.65V potential stored in the supercapacitor into the 5V Raspberry Pi input voltage.
-    The boost converter operation is controlled by the microcontroller. The microcontroller enables the boost converter when the supercapacitor voltage has risen above 1.5V (FIXME: check!).
+    The boost converter operation is controlled by the microcontroller. The microcontroller enables the boost converter when the supercapacitor voltage has risen above 1.8V.
     During system shutdown or watchdog reboot, the microcontroller disables the boost converter to cut the Raspberry Pi input voltage.
 6.  Status LEDs.
     The status LEDs indicate the board operational status LEDs as described in Section [LEDs](#sec_leds).
@@ -63,10 +63,43 @@ Different functional blocks of the Sailor Hat for Raspberry Pi are described bel
 ![Connectors](assets/SH-RPi-1.0.0-conx.jpg "Connectors"){:width="50%"}\\
 *SH-RPi connectors.*
 
+1. Power connector.
+   The power connector is a JST XH compatible header.
+   The Hat Labs sales kit includes a compatible pigtail cable.
+2. CAN bus (NMEA 2000) connector.
+   NMEA 2000 or other CAN bus can be connected to this connector.
+3. Wire link.
+   Main power input and CAN section power input pins can be connected together by soldering a wire to the wire link headers.
+   The main use case is to power the Raspberry Pi using a single NMEA 2000 cable without having to splice any wires.
+4. Stackable Raspberry Pi GPIO header.
+   This is a standard 2x20 pin Raspberry Pi GPIO header. Additional hats can be placed on top of the Sailor Hat for Raspberry Pi as long as there are no conflicting pins or I2C addresses.
+5. 5V output.
+   The 5V output header can be used to power a fan or other peripherals requiring a 5V input.
+6. ATtiny1614 breakout header.
+   The pins of the onboard ATtiny1614 microcontroller are broken out to this header.
+   The header can be used to program the microcontroller or to implement new functionality.
+7. Reset header.
+   The reset header can be used to forcibly hardware reset the Raspberry Pi.
+   The header is connected to the boost converter Enable pin.
+   Pulling the Reset pin low turns the boost converter off.
+   When the Reset pin is connected to 3.3V, it forces the boost converter to stay on regardless of the microcontroller state.
+   This can come handy for example when programming the microcontroller using the Raspberry Pi itself: you don't want the Raspberry Pi to shut down during the programming.
+8. ATtiny interrupt header.
+   This header is connected to the microcontroller INTerrupt pin. This pin can be used in the future by the optional RTC or an external interrupt source to wake up the Raspberry Pi.
+9. CR1220 battery connector for real-time clock.
+   The optional real-time clock requires a CR1220 backup battery to keep time when the system is powered off.
+   The battery must be oriented positive (flat) side up.
+
 ## Power supply
 
-- input specs
-- output specs
+The SH-RPi includes an integrated power supply subsystem for powering the Raspberry Pi using a noisy power source.
+The power supply permits input voltages between 8-32 V (although the output will be disabled if the input is less than 10V, to protect the vessel batteries from deep discharging).
+
+The input current is limited to a maximum of 0.8 A at 12 V.
+Above that limit, a current limiting circuit starts throttling the buck converter to control the maximum current drawn from the power input.
+
+The power supply output voltage is normally at 5.1 V.
+The maximum steady-state output current is about 1.2 A, or about twice the current consumption of a Raspberry Pi 4B. Maximum output currents over 3 A can be sustained over several hundred milliseconds.
 
 ## Peripherals
 
@@ -76,34 +109,57 @@ Different functional blocks of the Sailor Hat for Raspberry Pi are described bel
 ![Connectors](assets/SH-RPi-1.0.0-leds.jpg "Connectors"){:width="50%"}\\
 *SH-RPi indicator LEDs.*
 
+SH-RPi includes a number of LEDs to indicate the state of operation.
+
+1. Main LED array
+2. CAN power (on whenever input voltage is present at the CAN power pins)
+3. CAN receive and transmit (blink whenever data is received or transmitted over the CAN bus)
+
+The main LED array LEDs are as follows:
+
+- Vin: A green LED that indicates the 12/24V input voltage. The LED states are:
+   * Vin < 10 V: LED off
+   * 10 V < Vin < 11.5 V: LED blinking 50% on/off
+   * Vin > 11.5 V: LED solid on
+- 5V: Red LED solid on when 5V is enabled by the microcontroller
+- Vcap: Green LED that blinks according to the supercapacitor voltage. 100% off is 0 V, 100% on is 2.75 V.
+- Status: Different blink patterns indicate the state of the board as follows.
+
+![Blink patterns](assets/blink_patterns.png "Blink patterns")
+
+Different board statuses are:
+- Charging: the supercapacitor is charging but the voltage is too low to turn the 5V output on
+- On: 5V output is turned on
+- Watchdog enabled: 5V output is on, watchdog is enabled
+- Watchdog reboot: The daemon has not communicated in 10 seconds; the Raspberry Pi is reset by turning 5V off for two seconds
+- Depleting: Input voltage is not present and the supercapacitor is depleting
+- Shutting down: The daemon has requested a shutdown; the watchdog is turned off and the firmware waits until the kernel is shut down (as indicated by SDA being set low)
+- Off: 5V is turned off and the board is expected to be powered off. If the board remains powered, it will restart in 5 seconds.
 
 ### CAN bus (NMEA 2000)
 
 NMEA 2000 is a ubiquitous communications standard used for connecting sensor, control, and display devices on boats and ships.
 It is based on the Controller Area Network (CAN bus) which is a vehicle bus standard designed to allow devices to communicate with each other without a host computer.
 
-SH-RPi includes an isolated CAN bus interface that allows safe and NMEA 2000 compliant interconnection of devices.
+SH-RPi features an isolated CAN interface that allows safe and NMEA 2000 compliant interconnection of devices.
 
-TODO
+The CAN interface is implemented with an MCP2515 controller and an ISO1050DUB isolated transceiver.
+
+The Raspberry Pi communicates with the MCP2515 over an SPI interface. SH-RPi uses by default Raspberry Pi SPI0 with GPIO6 as a custom Chip Enable (CE) pin. This is done to allow simultaneous operation with other devices reserving the standard SPI pins. The interrupt pin is GPIO5.
 
 ### I2C
 
-I2C (Inter-Integrated Circuit) is a very popular synchronous serial communication bus commonly used for interfacing with a number of different ICs.
+I2C (Inter-Integrated Circuit) is a popular synchronous serial communication bus commonly used for interfacing with a number of different ICs.
 It uses two data wires in addition to voltage and ground.
 
-TODO
+The SH-RPi microcontroller communicates with the Raspberry Pi operating system over I2C. The microcontroller uses I2C address 0x6d.
 
-### Real-time clock backup battery
-
-
-### GPIO header
-
-
-
-### Other headers
-
+If the optional DS3231 real-time clock is installed, it additionally reserves the I2C address 0x68. 
 
 ## Remapping peripherals
 
 ![Hardware jumpers](assets/SH-RPi-1.0.0-jumpers.jpg "Hardware jumpers"){:width="50%"}\\
 *SH-RPi hardware jumpers.*
+
+For advanced use, all GPIO pins used by the Sailor Hat for Raspberry Pi can be disabled or remapped using the hardware jumpers.
+The hardware jumpers are 0603 size 0 ohm resistors that can be unsoldered from the board. Thin wires can then be soldered to the resistor pads for routing the peripherals to desired GPIO pins.
