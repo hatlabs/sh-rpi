@@ -134,7 +134,8 @@ Different board statuses are:
 - Watchdog reboot: The daemon has not communicated in 10 seconds; the Raspberry Pi is reset by turning 5V off for two seconds
 - Depleting: Input voltage is not present and the supercapacitor is depleting
 - Shutting down: The daemon has requested a shutdown; the watchdog is turned off and the firmware waits until the kernel is shut down (as indicated by SDA being set low)
-- Off: 5V is turned off and the board is expected to be powered off. If the board remains powered, it will restart in 5 seconds.
+- Off: 5V is turned off and the board is expected to be powered off.
+If the board remains powered, it will restart in 5 seconds.
 
 ### CAN bus (NMEA 2000)
 
@@ -145,7 +146,10 @@ SH-RPi features an isolated CAN interface that allows safe and NMEA 2000 complia
 
 The CAN interface is implemented with an MCP2515 controller and an ISO1050DUB isolated transceiver.
 
-The Raspberry Pi communicates with the MCP2515 over an SPI interface. SH-RPi uses by default Raspberry Pi SPI0 with GPIO6 as a custom Chip Enable (CE) pin. This is done to allow simultaneous operation with other devices reserving the standard SPI pins. The interrupt pin is GPIO5.
+The Raspberry Pi communicates with the MCP2515 over an SPI interface.
+SH-RPi uses by default Raspberry Pi SPI0 with GPIO6 as a custom Chip Enable (CE) pin.
+This is done to allow simultaneous operation with other devices reserving the standard SPI pins.
+The interrupt pin is GPIO5.
 
 ### I2C
 
@@ -162,4 +166,5 @@ If the optional DS3231 real-time clock is installed, it additionally reserves th
 *SH-RPi hardware jumpers.*
 
 For advanced use, all GPIO pins used by the Sailor Hat for Raspberry Pi can be disabled or remapped using the hardware jumpers.
-The hardware jumpers are 0603 size 0 ohm resistors that can be unsoldered from the board. Thin wires can then be soldered to the resistor pads for routing the peripherals to desired GPIO pins.
+The hardware jumpers are 0603 size 0 ohm resistors that can be unsoldered from the board. 
+Thin wires can then be soldered to the resistor pads for routing the peripherals to desired GPIO pins.
