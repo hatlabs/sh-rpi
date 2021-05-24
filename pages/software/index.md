@@ -123,6 +123,7 @@ Instead, the system implements a "fake hwclock" that fetches the current time fr
 
 If your SH-RPi has a real-time clock, this fake hwclock functionality needs to be disabled and replaced with actual hwclock calls. These four commands do the trick:
 
+     sudo apt-get update
      sudo apt-get -y remove fake-hwclock
      sudo update-rc.d -f fake-hwclock remove
      sudo systemctl disable fake-hwclock
@@ -151,5 +152,65 @@ The program code running on the onboard ATtiny1614 microcontroller is called the
 
 The firmware repository is at [https://github.com/hatlabs/SH-RPi-firmware](https://github.com/hatlabs/SH-RPi-firmware).
 
-- TODO: How to install the firmware
+The following subsections describe how to update the firmware to get new features or if you want to hack it yourself.
 
+### Updating the firmware
+
+It is possible to update the SH-RPi firmware using the connected Raspberry Pi with the help of one 1 kΩ resistor and some jumper wires.
+
+Flashing is performed over ATtiny's UPDI interface using [`pyupdi`](https://github.com/mraardvark/pyupdi).
+
+#### Hardware
+
+![Flashing circuit](assets/UPDI-circuit.jpg "Flashing circuit"){:width="50%"}\\
+*UPDI flashing circuit.*
+
+First, you need to make sure that the 5V boost converter output isn't cut when the flashing begins. The boost converter can be forced on by pulling the SH-RPi Reset header to 3.3 V using the red jumper wire.
+
+Next, you need the super-simple serial flashing harness shown in the above picture. Cut two or three jumper wires and solder the bits to the leads of a 1 kΩ resistor. The resistor should be between the Raspberry Pi TX (GPIO 14) and ATtiny RST pins and there should be a direct connection between Raspberry Pi RX (GPIO 15) and the ATtiny RST pins.
+
+The photo below shows what the result should look like.
+
+![Flashing circuit photo](assets/flashing-circuit-photo.jpg "Flashing circuit photo"){:width="50%"}\\
+*Photo of a working flashing circuit.*
+
+#### Raspberry Pi configuration changes
+
+The next step is to enable the serial UART on the Raspberry Pi. 
+On Bluetooth-enabled Pis, the UART is normally reserved by the onboard Bluetooth circuitry. So, let's disable Bluetooth.
+
+Add the following line at the end of `/boot/config.txt`:
+
+    dtoverlay=disable-bt
+
+We also need to disable the system service initializing the Bluetooth modem:
+
+    sudo systemctl disable hciuart
+
+Finally, prevent the system serial console from attaching to the serial port. Remove the `console=serial0,115200` part from the beginning of `/boot/cmdline.txt`.
+
+Reboot to allow the changes to take place.
+
+#### Installing flashing software
+
+While it is possible to build the firmware on the Raspberry Pi itself, I normally build the firmware on my laptop and then copy the binary file to the Pi for flashing. Hence, we only need the `pyupdi` utility on the Pi:
+
+    sudo apt update
+    sudo apt -y install python3-pip
+    sudo pip3 install https://github.com/mraardvark/pyupdi/archive/master.zip
+
+#### Flashing
+
+Copy the binary file at `.pio/build/attiny1614/firmware.hex` to the Raspberry Pi using `rsync`:
+
+    rasync -avP .pio/build/attiny1614/firmware.hex pi@myraspi.lan: 
+
+Finally, upload the firmware using `pyupdi`:
+
+    pyupdi -i -d attiny1614 -c /dev/ttyAMA0 -b 115200 -f firmware.hex
+
+The LEDs should go off (or dim) during the flashing and resume operation immediately afterwards.
+
+#### Restoring Bluetooth
+
+If you want to keep using Bluetooth, remember to undo the steps you made previously.
