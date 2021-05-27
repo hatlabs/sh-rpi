@@ -28,13 +28,13 @@ SH-RPi is delivered fully assembled. The hardware installation steps are:
 If you are going to use your Raspberry Pi and SH-RPi on a boat, you should always place the device in a waterproof enclosure!
 Hat Labs offers two different types of waterproof enclosures.
 
-[RND 455-00388](https://hatlabs.fi/product/enclosure-rnd-455-00388) is an IP 65 rated aluminum enclosure with dimensions of 200x120x75mm.
+[RND 455-00388](https://hatlabs.fi/product/metal-enclosure-200x120x75/) is an IP 65 rated aluminum enclosure with dimensions of 200x120x75mm.
 The size is sufficient for a Raspberry Pi and some peripherals, while not being excessively large.
 It offers excellent environmental and electromagnetic protection as well as thermal conductivity, but also blocks WiFi signals.
 Therefore, an external WiFi antenna needs to be used with it.
 Also, LEDs or status displays are obviously not visible unless LED light pipes or a plastic window aperture are installed.
 
-[RND 455-00138](https://hatlabs.fi/product/enclosure-rnd-455-00138) is a polycarbonate plastic box with a clear lid and IP 65 rating.
+[RND 455-00138](https://hatlabs.fi/product/plastic-enclosure-240x120x60/) is a polycarbonate plastic box with a clear lid and IP 65 rating.
 Its outer dimensions are 120x240x60mm, making it spacious enough for more peripherals.
 Even though it is plastic, it is large enough to provide sufficient surface area to provide adequate heat dissipation even for a Raspberry Pi 4B and some accessories.
 
