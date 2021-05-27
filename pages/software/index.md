@@ -33,9 +33,9 @@ The device tree overlay source files are located in the SH-RPi-daemon repository
 
     git clone https://github.com/hatlabs/SH-RPi-daemon.git
 
-Then, go to the overlays directory:
+Then, go to the configs directory:
 
-    cd SH-RPi-daemon/overlays
+    cd SH-RPi-daemon/configs
 
 The overlays need to be compiled to binary format:
 
