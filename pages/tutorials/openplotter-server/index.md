@@ -19,9 +19,17 @@ nav_order: 10
 
 ## Introduction
 
-In this tutorial we'll build an OpenPlotter server using a Sailor Hat for Raspberry Pi and the OpenPlotter software.
-This server will log all essential NMEA 2000 traffic on the boat and allows you to visualize the real-time and historical behavior of different values using Grafana dashboards.
+In this tutorial we'll build an OpenPlotter server using the [Sailor Hat for Raspberry Pi](https://hatlabs.github.io/sh-rpi/) ([purchasing link](https://hatlabs.fi/product/sh-rpi-enclosure-kit/)) and the OpenPlotter software.
+The server is compact and waterproof and integrates with your existing boat electronics.
+
+The included software will log all essential NMEA 2000 traffic on the boat and allows you to visualize the real-time and historical behavior of different values using Grafana dashboards.
 Furthermore, the server can receive and process information from other sources such as [SH-ESP32 sensor devices](https://hatlabs.github.io/sh-esp32/) or from various Internet services.
+
+Some visualization examples:
+
+
+[![002_engine_data.jpg](assets/screenshots/002_engine_data.jpg "002_engine_data.jpg"){:width="50%"}](assets/screenshots/002_engine_data.jpg)
+
 
 ## Parts needed
 
@@ -37,6 +45,8 @@ To complete this tutorial, you need the following parts:
     * [Raspberry Pi list of distributors](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/?variant=raspberry-pi-4-model-b-4gb)
 
 - [SH-RPi enclosure kit](https://hatlabs.fi/product/sh-rpi-enclosure-kit/)
+
+
 
   In this tutorial we'll use the plastic enclosure and power the Pi through an NMEA 2000 panel connector. Additionally, a USB type A panel connector is used to provide easier connectivity when needed, and a cooling fan is added to improve heat dissipation. Feel free to modify your own configuration, though.
 
