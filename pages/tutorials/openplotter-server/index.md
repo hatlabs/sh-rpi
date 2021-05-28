@@ -20,9 +20,10 @@ nav_order: 10
 ## Introduction
 
 In this tutorial we'll build an OpenPlotter server using the [Sailor Hat for Raspberry Pi](https://hatlabs.github.io/sh-rpi/) ([purchasing link](https://hatlabs.fi/product/sh-rpi-enclosure-kit/)) and the OpenPlotter software.
-The server is compact and waterproof and integrates with your existing boat electronics.
+The server is compact and waterproof and powered easily through the boat's 12/24V power system.
+It also integrates easily with your existing boat electronics.
 
-The included software will log all essential NMEA 2000 traffic on the boat and allows you to visualize the real-time and historical behavior of different values using Grafana dashboards.
+The included software will log all essential NMEA 2000 traffic on the boat and allows you to visualize the real-time and historical behavior of different values using integrated instrument panels as well as Grafana dashboards.
 Furthermore, the server can receive and process information from other sources such as [SH-ESP32 sensor devices](https://hatlabs.github.io/sh-esp32/) or from various Internet services.
 
 Some visualization examples:
@@ -33,6 +34,14 @@ Some visualization examples:
 
 To complete this tutorial, you need the following parts:
 
+- [SH-RPi enclosure kit](https://hatlabs.fi/product/sh-rpi-enclosure-kit/)
+
+  SH-RPi is the secret sauce that provides the required hardware interfaces to your boat's subsystems for the Raspberry Pi. It includes an integrated, protected 12/24V power supply with safe shutdown functionality as well as an isolated NMEA 2000 compatible CAN interface.
+
+  In this tutorial we'll use the plastic enclosure and power the Pi through an NMEA 2000 panel connector. Additionally, a USB type A panel connector is used to provide easier connectivity when needed, and a cooling fan is added to improve heat dissipation. Feel free to modify your own configuration, though.
+
+  We'll also use an additional USB WiFi adapter because that will make things easier during the installation (the additional network interface may come handy on the boat as well). If you don't want the USB WiFi adapter, you can alternatively plug the Pi into wired Ethernet for equivalent results.
+  
 - A Raspberry Pi 4B
 
   A 4 GB memory model is fine. Amazon tends to have unbeatable prices, or you can check the list of distributors on the Raspberry Pi website:
@@ -42,14 +51,6 @@ To complete this tutorial, you need the following parts:
     * [amazon.co.uk](https://www.amazon.co.uk/Raspberry-Pi-ARM-Cortex-A72-Bluetooth-Micro-HDMI/dp/B07TC2BK1X/)
     * [Raspberry Pi list of distributors](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/?variant=raspberry-pi-4-model-b-4gb)
 
-- [SH-RPi enclosure kit](https://hatlabs.fi/product/sh-rpi-enclosure-kit/)
-
-
-
-  In this tutorial we'll use the plastic enclosure and power the Pi through an NMEA 2000 panel connector. Additionally, a USB type A panel connector is used to provide easier connectivity when needed, and a cooling fan is added to improve heat dissipation. Feel free to modify your own configuration, though.
-
-  We'll also use an additional USB WiFi adapter because that will make things easier during the installation (the additional network interface may come handy on the boat as well). If you don't want the USB WiFi adapter, you can alternatively plug the Pi into wired Ethernet for equivalent results.
-  
 - MicroSD memory card
 
   A MicroSD card hosts the Raspberry Pi operating system and data files. I have had good results with Samsung Evo Plus cards. Memory cards are cheap and bigger ones are more reliable in Raspberry Pi use, so get at least a 64 GB one:
