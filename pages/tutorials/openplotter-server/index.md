@@ -27,9 +27,7 @@ Furthermore, the server can receive and process information from other sources s
 
 Some visualization examples:
 
-
-[![002_engine_data.jpg](assets/screenshots/002_engine_data.jpg "002_engine_data.jpg"){:width="50%"}](assets/screenshots/002_engine_data.jpg)
-
+[![001_examples.jpg](assets/screenshots/001_examples.jpg "001_examples.jpg")](assets/screenshots/001_examples.jpg)
 
 ## Parts needed
 
