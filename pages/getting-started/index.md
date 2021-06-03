@@ -111,7 +111,7 @@ The fan should be connected to the dedicated 5V header on the SH-RPi:
 
 Some additional configuration changes and software are required for the Raspberry Pi OS to detect the new CAN bus interface and to run the system service that will automatically initiate system shutdown once the power is cut.
 
-### Automatic installation
+### Automated installation
 
 A fully automated installation script is provided. The script is tested on newly flashed Raspberry Pi OS and might fail on a heavily modified system. Installation has not been tested on any other operating systems.
 
@@ -123,6 +123,14 @@ To run the automated installation script, copy-paste the following command onto 
 
 The command will fetch the installation script and execute it automatically.
 
+The automated installation script will:
+
+- enable the I2C and SPI interfaces
+- install device tree overlays for the CAN interface
+- define the CAN network interface
+- if the real-time clock device is detected, configure the Pi to use the RTC
+- install the SH-RPi-daemon and its dependencies
+
 ### Manual installation
 
-Manual installation of the required software is possible but not yet documented. Follow the steps taken in the [installation script](https://github.com/hatlabs/SH-RPi-daemon/blob/master/install.sh) and the [overlay makefile](https://github.com/hatlabs/SH-RPi-daemon/blob/master/overlays/Makefile).
+Manual installation of the required software is possible as well. The process is described in the [Software section](../software/).

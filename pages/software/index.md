@@ -15,7 +15,7 @@ nav_order: 40
 
 ## Introduction
 
-The Sailor Hat for Raspberry Pi requires additional software on the Raspberry Pi Operating System to fully utilize the device functionality. An installation script is provided to automatically install all required software on a fresh Raspberry Pi OS installation. Using the installation script is described in the [Getting Started Section](../getting-started/).
+The Sailor Hat for Raspberry Pi requires additional software on the Raspberry Pi Operating System to fully utilize the device functionality. An installation script is provided to automatically install all required software on a fresh Raspberry Pi OS installation. Using the installation script is described in the [Getting Started Section](../getting-started/). You will only need to follow the manual installation instructions if you prefer to not have automated scripts modify your system configuration or if you have to troubleshoot your installation.
 
 For manual installation, the required software and configuration changes as well as the firmware software details are described below.
 
@@ -146,6 +146,8 @@ Next, you will have to install the service definition file and enable the servic
 
 That's it!
 
+*Note: The Automated installation script described in the [Getting Started Section](../getting-started/) will perform all software installation steps described above automatically.*
+
 ## Firmware
 
 The program code running on the onboard ATtiny1614 microcontroller is called the SH-RPi firmware.
@@ -203,7 +205,7 @@ While it is possible to build the firmware on the Raspberry Pi itself, I normall
 
 Copy the binary file at `.pio/build/attiny1614/firmware.hex` to the Raspberry Pi using `rsync`:
 
-    rasync -avP .pio/build/attiny1614/firmware.hex pi@myraspi.lan: 
+    rsync -avP .pio/build/attiny1614/firmware.hex pi@myraspi.lan: 
 
 Finally, upload the firmware using `pyupdi`:
 
