@@ -35,7 +35,7 @@ Different functional blocks of the Sailor Hat for Raspberry Pi are described bel
     The step-down converter circuit also includes a separate current limiter that throttles the supercapacitor input current to cap the maximum device current draw to 0.8A (at 12V).
 3.  A 60F 2.7V supercapacitor.
     The supercapacitor acts as a power reservoir for the Raspberry Pi.
-    It can power a Raspberry Pi 4B for up to 40 seconds, and lower-power models for much longer.
+    It can power a Raspberry Pi 4B for up to 80 seconds (subject to the amount of additional peripherals, of course), and lower-power models for much longer.
     The supercapacitor also makes it possible to power the Raspberry Pi using a low-power interface such as the NMEA 2000 bus that limits an individual node current to 1.0A, including high-speed transients.
 4.  Microcontroller.
     The SH-RPi operations are controlled by an ATtiny1614 microcontroller.
@@ -45,7 +45,7 @@ Different functional blocks of the Sailor Hat for Raspberry Pi are described bel
     - Controls the Vin, Vcap, and Status leds
     - Controls the boost converter output
     - Receives real-time clock interrupt information (can be used as an external interrupt source as well)
-    - Communicates the SH-RPi status the the Raspberry Pi service over I2C
+    - Communicates the SH-RPi status to the Raspberry Pi service over I2C
 5.  Step-up (boost) converter.
     The boost converter converts the 0.5-2.65V potential stored in the supercapacitor into the 5V Raspberry Pi input voltage.
     The boost converter operation is controlled by the microcontroller. The microcontroller enables the boost converter when the supercapacitor voltage has risen above 1.8V.
@@ -53,7 +53,7 @@ Different functional blocks of the Sailor Hat for Raspberry Pi are described bel
 6.  Status LEDs.
     The status LEDs indicate the board operational status LEDs as described in Section [LEDs](#sec_leds).
 7.  Real-time clock (optional).
-    The board includes an optional DS3231MZ real-time clock that can keep accurate time even in absence of internet or GPS connectivity.
+    The board includes an optional DS3231MZ real-time clock that can keep accurate time even in the absence of internet or GPS connectivity.
     The RTC communicates with the Raspberry Pi over I2C.
 8.  CAN bus (NMEA 2000) interface.
     The SH-RPi includes an MCP2515 CAN controller and an ISO1050DUB CAN transceiver that provide an isolated, NMEA 2000 compliant CAN bus interface. The interface can be used as a generic CAN interface if external power is provided to the CAN connector.
@@ -88,11 +88,11 @@ Different functional blocks of the Sailor Hat for Raspberry Pi are described bel
    This header is connected to the microcontroller INTerrupt pin. This pin can be used in the future by the optional RTC or an external interrupt source to wake up the Raspberry Pi.
 9. CR1220 battery connector for real-time clock.
    The optional real-time clock requires a CR1220 backup battery to keep time when the system is powered off.
-   The battery must be oriented positive (flat) side up.
+   The battery must be oriented positive (flatter) side up.
 
 ## Power supply
 
-The SH-RPi includes an integrated power supply subsystem for powering the Raspberry Pi using a noisy power source.
+The SH-RPi includes an integrated power supply subsystem that provides a clean power supply to the Raspberry Pi from a noisy power source, like a boat's "house" battery system.
 The power supply permits input voltages between 8-32 V (although the output will be disabled if the input is less than 10V, to protect the vessel batteries from deep discharging).
 
 The input current is limited to a maximum of 0.8 A at 12 V.

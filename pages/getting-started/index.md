@@ -59,9 +59,8 @@ Suitable hole sizes for different connectors:
 - SP13 panel connectors (blue-black plastic connectors): 13-14 mm.
   1/2" probably works with a bit of wiggling.
 - PG9 cable gland: 16 mm or 5/8"
-- RJ45 panel connector: TODO
-- USB type A panel connector: TODO
-- HDMI panel connector: TODO
+- RJ45 panel connector: 21-22 mm
+- USB type A panel connector: 21-22 mm
 
 ### Mounting the Raspberry Pi
 
@@ -120,6 +119,11 @@ To run the automated installation script, copy-paste the following command onto 
     curl -L \
         https://raw.githubusercontent.com/hatlabs/SH-RPi-daemon/main/install.sh \
         | sudo bash
+
+The command is three lines and when you paste it to your terminal window, it might show up with line continuation characters. That's OK.
+
+![Installation command in terminal](assets/automated-installation-screenshot.png "Installation command in terminal"){:width="50%"}\\
+
 
 The command will fetch the installation script and execute it automatically.
 

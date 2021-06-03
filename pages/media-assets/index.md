@@ -10,8 +10,8 @@ Here you can find some high-resolution photos and other pictures suited for publ
 
 ## Renderings
 
-TODO
+To be added.
 
 ## Photos
 
-TODO
+To be added.
