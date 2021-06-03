@@ -91,6 +91,24 @@ If you want to power the Raspberry Pi via the NMEA 2000 network, splice the blac
 ![NMEA 2000 splice example](assets/N2K-splice-example-scaled.jpg "NMEA 2000 splice example"){:width="50%"}\\
 *Two JST XH pigtails spliced together.*
 
+The photo below shows the correct pin ordering for the NMEA 2000 connector when soldering the wires.
+
+![NMEA 2000 connector wiring](assets/n2k_connector_wiring_photo.jpg "NMEA 2000 connector wiring"){:width="50%"}\\
+
+Note that the official NMEA 2000 wire coloring uses blue for CAN_L. The JST XH pigtail provided substitutes that for a yellow wire instead.
+
+Pin | Position | Color | Purpose
+--- | -------- | ----- | -------
+1   | NW       | (unconnected) * | Shield
+2   | NE       | Red   | 12 V
+3   | SE       | Black | GND
+4   | SW       | White | CAN_H
+5   | Center   | Yellow ** | CAN_L
+
+\* According to NMEA 2000 standard, shield must not be connected to the device metal enclosure. However, shield must have continuity throughout the network cabling. So, if cables should always have the shield pin connected, but enclosures not.
+
+\** NMEA 2000 standard color for CAN_L is *blue*. 
+
 ### Soldering the panel connectors
 
 When soldering the internal wires to the panel connectors, always use heat shrink tube on the individual wires.
