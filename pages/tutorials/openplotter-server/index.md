@@ -83,9 +83,9 @@ If you have no idea what program to use, [Inkscape](https://inkscape.org) is a g
 
 I wanted to have three holes at the short edge of the plastic enclosure. Here's the template I did for that:
 
-![Drilling template example](assets/plastic-enclosure-end-template.svg "Drilling template example"){:width="50%"}
+[![Drilling template example](assets/plastic-enclosure-end-template.svg "Drilling template example"){:width="50%"}](assets/plastic-enclosure-end-template.svg)
 
-The template is an SVG (vector) file, so you can save it and modify according to your liking.
+The [template](assets/plastic-enclosure-end-template.svg) is an SVG (vector) file, so you can save it and modify according to your liking.
 If you don't know which software to use, you can try for example [Inkscape](https://inkscape.org) mentioned above. I personally use Affinity Designer that is a low-cost commercial design software available for MacOS.
 
 If you have trouble opening the SVG, the template is also available as a [PDF version](assets/plastic-enclosure-end-template.pdf).

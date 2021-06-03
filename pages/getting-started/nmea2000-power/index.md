@@ -9,7 +9,7 @@ parent: Getting Started
 
 It is possible to power the Raspberry Pi via the NMEA 2000 network. To stay compliant with the NMEA 2000 specification and to ensure safe and uninterrupted operation of the NMEA 2000 network, it is important to observe some restrictions in the device connections.
 
-The following diagrams illustrated the valid powering schemes.
+The following diagrams illustrate the valid powering schemes.
 In the diagrams, dashed lines illustrate the isolation barrier
 
 ![Powered externally](assets/Power-diagram-n2k-and-power.png "Powered externally")\\

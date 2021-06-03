@@ -8,8 +8,10 @@ permalink: /
 
 # Introduction
 
-Sailor Hat for Raspberry Pi (SH-RPi for short) is a power management and NMEA 2000 interface board for boat use.
-It allows you to build boat servers running [Signal K](https://signalk.org), [OpenCPN](https://opencpn.org), or your own custom IoT software and power them directly from the boat's 12V or 24V network and interface safely with the boat's NMEA 2000 data network.
+Sailor Hat for Raspberry Pi (SH-RPi for short) is a power management and NMEA 2000 interface board for the Raspberry Pi.
+When connected to a Raspberry Pi single board computer (not included!), it allows you to build boat servers running [Signal K](https://signalk.org), [OpenPlotter](https://openmarine.net/openplotter), or your own custom IoT software and power them directly from the boat's 12V or 24V network and interface safely with the boat's NMEA 2000 data network.
+
+To use the SH-RPi, you need to bring your own Raspberry Pi. All models supporting the 40-pin GPIO header (that is, every model since the Pi 1 Model B+) are supported.
 
 ![SH-RPi v1.0.0 rendering]({{site.baseurl}}/media/SH-RPi-1.0.0-render.jpg "SH-RPi v1.0.0 rendering"){:width="50%"}\\
 <a name="fig_sh-rpi-1.0.0-render"></a>*Sailor Hat for Raspberry Pi v1.0.0.*
@@ -24,7 +26,7 @@ The integrated supercapacitor ensures that intermittent power outages are totall
 SH-RPi includes a current limiting circuit that limits the maximum input current to approximately 0.8A.
 The supercapacitor provides ample peak power capability to run even power-hungry single-board computers with multiple peripheral devices such as a screen and an SSD drive.
 - Shut the server down safely when the power is switched off.
-The computer is informed about the power outage and the supercapacitor provides power while the computer shuts down in a controlled fashion.
+The computer is informed about the power outage and the supercapacitor provides power while the computer shuts down in a controlled fashion. The supercapacitor is able to power a single Raspberry Pi 4B for up to 80 seconds, far more than the typical shutdown time of 10-15 seconds or less.
 No more corrupted SD cards!
 - Interface the Raspberry Pi with the boat's NMEA 2000 network or an automotive CAN bus.
 SH-RPi includes an isolated NMEA 2000 interface that is compliant with the NMEA 2000 specification.
