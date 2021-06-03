@@ -143,6 +143,10 @@ I'm boldly assuming you remembered to slide the heat shrink bits in place before
 
 Screw the finished NMEA 2000 panel connector onto the enclosure.
 
+Yet another photo of a finished connector and the pinout:
+
+![Finished connector](../../getting-started/assets/n2k_connector_wiring_photo.jpg "Finished connector"){:width="50%"}
+
 ### Connecting other panel connectors
 
 Now that the hard part is done, the other connectors can be screwed in place. To improve the watertightness of the WiFi antenna connector, you can add a small O-ring or a gasket around the connector before mounting it.
