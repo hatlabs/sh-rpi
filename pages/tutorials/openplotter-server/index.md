@@ -19,12 +19,12 @@ nav_order: 10
 
 ## Introduction
 
-In this tutorial we'll build an OpenPlotter server using the [Sailor Hat for Raspberry Pi](https://hatlabs.github.io/sh-rpi/) ([purchasing link](https://hatlabs.fi/product/sh-rpi-enclosure-kit/)) and the OpenPlotter software.
+In this tutorial we'll build an OpenPlotter server using the [Sailor Hat for Raspberry Pi](https://docs.hatlabs.fi/sh-rpi/) ([purchasing link](https://hatlabs.fi/product/sh-rpi-enclosure-kit/)) and the OpenPlotter software.
 The server is compact and waterproof and powered easily through the boat's 12/24V power system.
 It also integrates easily with your existing boat electronics.
 
 The included software will log all essential NMEA 2000 traffic on the boat and allows you to visualize the real-time and historical behavior of different values using integrated instrument panels as well as Grafana dashboards.
-Furthermore, the server can receive and process information from other sources such as [SH-ESP32 sensor devices](https://hatlabs.github.io/sh-esp32/) or from various Internet services.
+Furthermore, the server can receive and process information from other sources such as [SH-ESP32 sensor devices](https://docs.hatlabs.fi/sh-esp32/) or from various Internet services.
 
 Some visualization examples:
 
@@ -348,7 +348,7 @@ If you're receiving data, you can already visualize it by opening the SK Instrum
 
 You can configure some paths by using the wrench button. The panel sizes and positions can be adjusted by clicking the lock button.
 
-My test lab is just under a metal roof with absolutely now GPS reception, and the only interesting data in my network is coming from the [1-Wire Temperature Sensor](https://hatlabs.github.io/sh-esp32/pages/tutorials/onewire-temperature/). So, my instrument panel now consists of three temperature values:
+My test lab is just under a metal roof with absolutely now GPS reception, and the only interesting data in my network is coming from the [1-Wire Temperature Sensor](https://docs.hatlabs.fi/sh-esp32/pages/tutorials/onewire-temperature/). So, my instrument panel now consists of three temperature values:
 
 [![302_sk_instrument_panel.jpg](assets/screenshots/302_sk_instrument_panel.jpg "302_sk_instrument_panel.jpg"){:width="50%"}](assets/screenshots/302_sk_instrument_panel.jpg)
 

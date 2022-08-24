@@ -1,6 +1,6 @@
 # SH-RPi documentation repository
 
-This is the SH-RPi Jekyll documentation repository that is rendered to project documentation available at https://hatlabs.github.io/sh-rpi/.
+This is the SH-RPi Jekyll documentation repository that is rendered to project documentation available at https://docs.hatlabs.fi/sh-rpi/.
 SH-RPi is a power management and NMEA 2000 interface hat for the Raspberry Pi, especially designed for use in the marine environment.
 It is available for purchase at https://hatlabs.fi.
 
