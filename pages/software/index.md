@@ -112,6 +112,7 @@ Add the following lines:
     auto can0
     iface can0 can static
         bitrate 250000
+        pre-up ip link set can0 type can restart-ms 100
         up /sbin/ifconfig can0 txqueuelen 100
 
 Save and exit.
