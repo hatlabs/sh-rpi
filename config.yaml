@@ -93,3 +93,20 @@ module:
       disable: false
     - path: github.com/google/docsy/dependencies
       disable: false
+menu:
+  main:
+    - name: Main Site
+      weight: 10
+      url: 'https://hatlabs.fi'
+    - name: Shop
+      weight: 20
+      url: 'https://shop.hatlabs.fi'
+    - name: Docs
+      weight: 30
+      url: 'https://docs.hatlabs.fi'
+    - name: Discussion
+      weight: 40
+      url: 'https://github.com/hatlabs/discussions/discussions'
+    - name: Contact
+      weight: 50
+      url: 'https://hatlabs.fi/contact'
