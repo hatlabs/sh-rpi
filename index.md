@@ -38,7 +38,7 @@ SH-RPi has been designed to not interfere with other devices using the SPI data 
 SH-RPi complies with the relevant European and maritime electromagnetic compatibility standards, ensuring that the device does not interfere with other sensitive devices such as the VHF radio or the GPS.
 
 Sailor Hat for Raspberry Pi is open hardware, licensed under the Creative Commons Attribution-ShareAlike 4.0 International license.
-You can create your own SH-ESP32 derivatives as long as you share them under similar terms!
+You can create your own SH-RPi derivatives as long as you share them under similar terms!
 
 ## Getting the hardware
 
