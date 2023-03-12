@@ -1,5 +1,5 @@
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-.bundle/
+/public
+resources/
+node_modules/
+package-lock.json
+.hugo_build.lock
