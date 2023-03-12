@@ -22,7 +22,7 @@ When connected to a Raspberry Pi single board computer (not included!), it allow
 
 To use the SH-RPi, you need to bring your own Raspberry Pi. All models supporting the 40-pin GPIO header (that is, every model since the Pi 1 Model B+) are supported.
 
-<img src="media/SH-RPi-1.0.0-render.jpg" alt="SH-RPi v1.0.0 rendering" width="50%"><br>
+<img src="SH-RPi-1.0.0-render.jpg" alt="SH-RPi v1.0.0 rendering" width="50%"><br>
 <a name="fig_sh-rpi-1.0.0-render"></a>*Sailor Hat for Raspberry Pi v1.0.0.*
 
 Central use cases include:
