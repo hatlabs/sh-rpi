@@ -1,0 +1,122 @@
+baseURL: /
+title: Sailor Hat for Raspberry Pi
+contentDir: content/en
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+enableMissingTranslationPlaceholders: true
+enableRobotsTXT: true
+enableGitInfo: true
+taxonomies:
+  tag: tags
+  category: categories
+params:
+  taxonomy:
+    taxonomyCloud:
+      - tags
+      - categories
+    taxonomyCloudTitle:
+      - Tag Cloud
+      - Categories
+    taxonomyPageHeader:
+      - tags
+      - categories
+    pygmentsCodeFences: true
+    pygmentsUseClasses: false
+    pygmentsUseClassic: false
+    pygmentsStyle: tango
+  copyright: Hat Labs Oy
+  privacy_policy: 'https://policies.google.com/privacy'
+  version_menu: Releases
+  archived_version: false
+  version: '1.0'
+  url_latest_version: 'https://docs.hatlabs.fi/sh-rpi/'
+  github_repo: 'https://github.com/hatlabs/sh-rpi'
+  github_project_repo: 'https://github.com/hatlabs/SH-RPi-hardware'
+  github_branch: main
+  gcs_engine_id: a31868f3e68674aa2
+  algolia_docsearch: false
+  offlineSearch: false
+  prism_syntax_highlighting: false
+  ui:
+    breadcrumb_disable: false
+    footer_about_disable: false
+    navbar_logo: true
+    navbar_translucent_over_cover_disable: false
+    sidebar_menu_compact: false
+    sidebar_search_disable: false
+    feedback:
+      enable: false
+      'yes': >-
+        Glad to hear it! Please <a
+        href="https://github.com/hatlabs/sh-rpi/issues/new">tell us how we
+        can improve</a>.
+      'no': >-
+        Sorry to hear that. Please <a
+        href="https://github.com/hatlabs/sh-rpi/issues/new">tell us how we
+        can improve</a>.
+    readingtime:
+      enable: false
+  links:
+    user:
+      - name: User mailing list
+        url: 'https://example.org/mail'
+        icon: fa fa-envelope
+        desc: Discussion and help from your fellow users
+      - name: Twitter
+        url: 'https://example.org/twitter'
+        icon: fab fa-twitter
+        desc: Follow us on Twitter to get the latest news!
+      - name: Stack Overflow
+        url: 'https://example.org/stack'
+        icon: fab fa-stack-overflow
+        desc: Practical questions and curated answers
+    developer:
+      - name: GitHub
+        url: 'https://github.com/google/docsy'
+        icon: fab fa-github
+        desc: Development takes place here!
+      - name: Slack
+        url: 'https://example.org/slack'
+        icon: fab fa-slack
+        desc: Chat with other project developers
+      - name: Developer mailing list
+        url: 'https://example.org/mail'
+        icon: fa fa-envelope
+        desc: Discuss development issues around the project
+permalinks:
+  blog: '/:section/:year/:month/:day/:slug/'
+imaging:
+  resampleFilter: CatmullRom
+  quality: 75
+  anchor: smart
+services:
+  googleAnalytics:
+    id: G-F3KDPEBJEF
+languages:
+  en:
+    title: Sailor Hat for Raspberry Pi
+    description: A smart power management hat for Raspberry Pi
+    languageName: English
+    weight: 1
+    time_format_default: 2006-01-02
+    time_format_blog: 2006-01-02
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: tango
+outputs:
+  section:
+    - HTML
+    - print
+    - RSS
+module:
+  hugoVersion:
+    extended: true
+    min: 0.75.0
+  imports:
+    - path: github.com/google/docsy
+      disable: false
+    - path: github.com/google/docsy/dependencies
+      disable: false
