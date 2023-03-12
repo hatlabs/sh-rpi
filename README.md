@@ -1,3 +1,21 @@
+# SH-RPi documentation repository
+
+This is the SH-RPi documentation repository that is rendered to project documentation available at https://docs.hatlabs.fi/sh-rpi/.
+SH-RPi is a power management hat for the Raspberry Pi, 
+available for purchase at https://shop.hatlabs.fi.
+
+## Contributing
+
+You can contribute to the documentation by cloning the repository, modifying the Markdown pages, and creating a Pull Request.
+Instructions for generic GitHub use can be found at [The GitHub Guides](https://guides.github.com).
+
+The pages are rendered using [Hugo](https://gohugo.io/), a modern static site generation framework.
+The Hugo theme in use is [Docsy](https://www.docsy.dev/).
+
+If you want to test your modifications locally, [install Hugo](https://gohugo.io/installation/) and then run `hugo server`.
+
+----
+
 # Docsy Example
 
 [Docsy][] is a [Hugo theme module][] for technical documentation sites, providing easy
