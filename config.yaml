@@ -24,11 +24,16 @@ params:
     pygmentsUseClasses: false
     pygmentsUseClassic: false
     pygmentsStyle: tango
+  versions:
+    - version: v2
+      url: 'https://docs.hatlabs.fi/sh-rpi/'
+    - version: v1
+      url: 'https://docs.hatlabs.fi/sh-rpi-v1/'
   copyright: Hat Labs Oy
   privacy_policy: ''
-  version_menu: Releases
+  version_menu: Versions
   archived_version: false
-  version: '1.0'
+  version: '2.0'
   url_latest_version: 'https://docs.hatlabs.fi/sh-rpi/'
   github_repo: 'https://github.com/hatlabs/sh-rpi'
   github_project_repo: 'https://github.com/hatlabs/SH-RPi-hardware'
