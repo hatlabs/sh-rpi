@@ -1,8 +1,14 @@
 ---
 linkTitle: Hardware
-title: Hardeware Description
+title: Hardware Description
 weight: 300
 ---
+
+
+{{% pageinfo color="warning" %}}
+This section has not yet been updated to reflect the v2 hardware changes.
+{{% /pageinfo %}}
+
 
 ## Tour Around the Board
 

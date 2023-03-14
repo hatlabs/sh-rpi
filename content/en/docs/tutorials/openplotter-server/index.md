@@ -3,6 +3,10 @@ title: OpenPlotter Server Installation
 weight: 10
 ---
 
+{{% pageinfo color="warning" %}}
+This section has not yet been updated to reflect the v2 hardware changes.
+{{% /pageinfo %}}
+
 ## Introduction
 
 In this tutorial we'll build an OpenPlotter server using the [Sailor Hat for Raspberry Pi](https://docs.hatlabs.fi/sh-rpi/) ([purchasing link](https://hatlabs.fi/product/sh-rpi-enclosure-kit/)) and the OpenPlotter software.

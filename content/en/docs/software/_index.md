@@ -3,6 +3,10 @@ title: Software
 weight: 400
 ---
 
+{{% pageinfo color="warning" %}}
+This section has not yet been updated to reflect the v2 hardware changes.
+{{% /pageinfo %}}
+
 ## Introduction
 
 The Sailor Hat for Raspberry Pi requires additional software on the Raspberry Pi Operating System to fully utilize the device functionality. An installation script is provided to automatically install all required software on a fresh Raspberry Pi OS installation. Use of the installation script is described in the [Getting Started Section](../getting-started/). You will only need to follow the manual installation instructions if you prefer to not have automated scripts modify your system configuration or if you have to troubleshoot your installation.
