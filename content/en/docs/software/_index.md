@@ -155,8 +155,9 @@ Flashing is performed over ATtiny's UPDI interface using [`pyupdi`](https://gith
 
 #### Hardware
 
-<img src="assets/UPDI-circuit.jpg" alt="Flashing circuit" width="50%"><br>
-*UPDI flashing circuit.*
+{{< imgrel "UPDI-circuit.jpg" "50%" >}}
+UPDI flashing circuit.
+{{< /imgrel >}}
 
 First, you need to make sure that the 5V boost converter output isn't cut when the flashing begins. The boost converter can be forced on by pulling the SH-RPi Reset header to 3.3 V using the red jumper wire.
 
@@ -164,8 +165,9 @@ Next, you need the super-simple serial flashing harness shown in the above pictu
 
 The photo below shows what the result should look like.
 
-<img src="assets/flashing-circuit-photo.jpg" alt="Flashing circuit photo" width="50%"><br>
-*Photo of a working flashing circuit.*
+{{< imgrel "flashing-circuit-photo.jpg" "50%" >}}
+Photo of a working flashing circuit.
+{{< /imgrel >}}
 
 #### Raspberry Pi configuration changes
 

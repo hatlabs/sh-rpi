@@ -8,8 +8,9 @@ weight: 30
 
 Different functional blocks of the Sailor Hat for Raspberry Pi are described below.
 
-<img src="assets/SH-RPi-1.0.0-func.jpg" alt="Functional blocks" width="50%"><br>
-*Functional blocks of the SH-RPi.*
+{{< imgrel "SH-RPi-1.0.0-func.jpg" "50%" >}}
+Functional blocks of the SH-RPi.
+{{< /imgrel >}}
 
 1.  Power input and protection. 
     Power input is provided through a 2-pin JST XH connector.
@@ -49,8 +50,9 @@ Different functional blocks of the Sailor Hat for Raspberry Pi are described bel
 
 ## Connectors
 
-<img src="sets/SH-RPi-1.0.0-conx.jpg" alt="Connectors" width="50%"><br>
-*SH-RPi connectors.*
+{{< imgrel "SH-RPi-1.0.0-conx.jpg" "50%" >}}
+SH-RPi connectors.
+{{< /imgrel >}}
 
 1. Power connector.
    The power connector is a JST XH compatible header.
@@ -95,8 +97,9 @@ The maximum steady-state output current is about 1.2 A, or about twice the curre
 ### LEDs
 <a name="sec_leds"></a>
 
-<img src="sets/SH-RPi-1.0.0-leds.jpg" alt="Connectors" width="50%"><br>
-*SH-RPi indicator LEDs.*
+{{< imgrel "SH-RPi-1.0.0-leds.jpg" "50%" >}}
+SH-RPi indicator LEDs.
+{{< /imgrel >}}
 
 SH-RPi includes a number of LEDs to indicate the state of operation.
 
@@ -114,8 +117,9 @@ The main LED array LEDs are as follows:
 - Vcap: Green LED that blinks according to the supercapacitor voltage. 100% off is 0 V, 100% on is 2.75 V.
 - Status: Different blink patterns indicate the state of the board as follows.
 
-<img src="assets/blink_patterns.png" alt="Blink patterns" ><br>
-![]( "Blink patterns")
+{{< imgrel "blink_patterns.png" "75%" >}}
+Blink patterns
+{{< /imgrel >}}
 
 Different board statuses are:
 - Charging: the supercapacitor is charging but the voltage is too low to turn the 5V output on
@@ -152,8 +156,9 @@ If the optional DS3231 real-time clock is installed, it additionally reserves th
 
 ## Remapping Peripherals
 
-<img src="assets/SH-RPi-1.0.0-jumpers.jpg" alt="Hardware jumpers" width="50%"><br>
-*SH-RPi hardware jumpers.*
+{{< imgrel "SH-RPi-1.0.0-jumpers.jpg" "50%" >}}
+SH-RPi hardware jumpers.
+{{< /imgrel >}}
 
 For advanced use, all GPIO pins used by the Sailor Hat for Raspberry Pi can be disabled or remapped using the hardware jumpers.
 The hardware jumpers are 0603 size 0 ohm resistors that can be unsoldered from the board. 

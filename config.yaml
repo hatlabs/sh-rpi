@@ -1,4 +1,4 @@
-baseURL: /
+baseURL: https://docs.hatlabs.fi/sh-rpi/
 title: Sailor Hat for Raspberry Pi
 contentDir: content/en
 defaultContentLanguage: en

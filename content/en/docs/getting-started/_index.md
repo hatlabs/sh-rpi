@@ -38,8 +38,9 @@ If you are planning to wall-mount the enclosure, place the connectors under the 
 Both aluminum and polycarbonate are relatively soft and can be drilled with a step drill bit (one that looks like a small metal Christmas tree).
 When drilling plastic, standard metal drill bits may easily bite too hard and crack the wall.
 
-<img src="assets/step_drill_bit.jpg" alt="Step drill bit" width="50%"><br>
-<a name="fig_step_drill_bit"></a>*An example of step drill bits.*
+{{< imgrel "step_drill_bit.jpg" "50%" >}}
+An example of step drill bits.
+{{< /imgrel >}}
 
 Suitable hole sizes for different connectors:
 
@@ -55,14 +56,16 @@ Suitable hole sizes for different connectors:
 
 A Raspberry Pi can be mounted on the enclosure with the [Raspberry Pi mount adapters](https://hatlabs.fi/product/rpi-mount-adapter) and the adhesive spacers.
 
-<img src="assets/SH-RPi_example_assembly.png" alt="SH-RPi assembly" ><br>
-<a name="fig_sh-rpi_assembly"></a>*An exploded view of assembly with the suggested components.*
+{{< imgrel "SH-RPi_example_assembly.png" "50%" >}}
+An exploded view of assembly with the suggested components.
+{{< /imgrel >}}
 
 Mount at least one of the adapter screws on the enclosure holes for secure attachment.
 This will reduce the likelihood of the Raspberry Pi rattling around the enclosure if the adhesives are not firmly attached.
 
-<img src="assets/Enclosure_mounting_top.jpg" alt="Mounting suggestion" width="50%"><br>
-<a name="fig_mounting_suggestion"></a>*An example mounting of the SH-RPi in an enclosure.*
+{{< imgrel "Enclosure_mounting_top.jpg" "50%" >}}
+An example mounting of the SH-RPi in an enclosure.
+{{< /imgrel >}}
 
 ### Power and NMEA 2000 connections
 
@@ -72,17 +75,21 @@ It is also possible to power the SH-RPi via the NMEA 2000 network, provided that
 
 If power is provided via a dedicated power connector, install a panel connector on the enclosure and solder the provided JST XH pigtail cable to the panel connector.
 
-<img src="assets/Power-conx-example-scaled.jpg" alt="Power connector example" width="50%"><br>
-*JST XH pigtail soldered to an SP13 panel connector.*
+{{< imgrel "Power-conx-example-scaled.jpg" "50%" >}}
+JST XH pigtail soldered to an SP13 panel connector.
+{{< /imgrel >}}
 
 If you want to power the Raspberry Pi via the NMEA 2000 network, splice the black and red wires of the JST XH pigtail cables together as shown in the following picture:
 
-<img src="assets/N2K-splice-example-scaled.jpg" alt="NMEA 2000 splice example" width="50%"><br>
-*Two JST XH pigtails spliced together.*
+{{< imgrel "N2K-splice-example-scaled.jpg" "50%" >}}
+Two JST XH pigtails spliced together.
+{{< /imgrel >}}
 
 The photo below shows the correct pin ordering for the NMEA 2000 connector when soldering the wires.
 
-<img src="assets/n2k_connector_wiring_photo.jpg" alt="NMEA 2000 connector wiring" width="50%"><br>
+{{< imgrel "n2k_connector_wiring_photo.jpg" "50%" >}}
+Correct pin ordering for the NMEA 2000 connector.
+{{< /imgrel >}}
 
 Note that the official NMEA 2000 wire coloring uses blue for CAN_L. The JST XH pigtail provided substitutes that for a yellow wire instead.
 
@@ -111,8 +118,9 @@ A small 40mm fan can be mounted in the enclosure with two-sided tape or hot glue
 
 The fan should be connected to the dedicated 5V header on the SH-RPi:
 
-<img src="assets/SH-RPi-1.0.0-5V_header.jpg" alt="5V header" width="50%">
-
+{{< imgrel "SH-RPi-1.0.0-5V_header.jpg" "50%" >}}
+Fan header on the SH-RPi.
+{{< /imgrel >}}
 ## Software installation
 
 Some additional configuration changes and software are required for the Raspberry Pi OS to detect the new CAN bus interface and to run the system service that will automatically initiate system shutdown once the power is cut.
@@ -129,8 +137,9 @@ To run the automated installation script, copy-paste the following command onto 
 
 The command is three lines and when you paste it to your terminal window, it might show up with line continuation characters. That's OK.
 
-![Installation command in terminal](assets/automated-installation-screenshot.png "Installation command in terminal"){:width="50%"}\\
-
+{{< imgrel "automated-installation-screenshot.png" "80%" >}}
+Installation command in terminal
+{{< /imgrel >}}
 
 The command will fetch the installation script and execute it automatically.
 
