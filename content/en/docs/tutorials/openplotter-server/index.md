@@ -7,6 +7,8 @@ weight: 10
 This section has not yet been updated to reflect the v2 hardware changes.
 {{% /pageinfo %}}
 
+<div class="-text-500">
+
 ## Introduction
 
 In this tutorial we'll build an OpenPlotter server using the [Sailor Hat for Raspberry Pi](https://docs.hatlabs.fi/sh-rpi/) ([purchasing link](https://hatlabs.fi/product/sh-rpi-enclosure-kit/)) and the OpenPlotter software.
@@ -563,3 +565,6 @@ This is what my resulting engine temperature dashboard looks like:
 </a>
 
 That's it. Go create awesome dashboards and show them to your marina and yacht club buddies! Also share them at [Hat Labs Discussion forum](https://github.com/hatlabs/discussions/discussions) for inspiration!
+
+
+</div>

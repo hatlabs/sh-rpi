@@ -66,11 +66,14 @@ The automated installation script will:
 - enable the device overlay for the real-time clock
 - install the SH-RPi service software
 
-## Enclosures
 
 {{% alert title="Note" color="info" %}}
 The sections below are still heavily under construction and will be updated as the enclosure options become available.
 {{% /alert %}}
+
+<div class="-text-500">
+
+## Enclosures
 
 If you are going to use your Raspberry Pi and SH-RPi outside, in a vehicle or on a boat, or wherever in a highly condensing environment, you should always place the device in a waterproof enclosure!
 Hat Labs offers several types of [waterproof enclosures](https://shop.hatlabs.fi/collections/accessories-enclosures), some with pre-drilled holes for standard connectors.
@@ -120,3 +123,6 @@ The fan should be connected to the generic 5V output connector on the SH-RPi:
 {{< imgrel "shrpi_5v_output.jpg" "50%" >}}
 Connect the fan to the connector indicated by the red arrow.
 {{< /imgrel >}}
+
+</div>
+

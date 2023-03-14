@@ -9,6 +9,7 @@ weight: 300
 This section has not yet been updated to reflect the v2 hardware changes.
 {{% /pageinfo %}}
 
+<div class="-text-500">
 
 ## Tour Around the Board
 
@@ -169,3 +170,6 @@ SH-RPi hardware jumpers.
 For advanced use, all GPIO pins used by the Sailor Hat for Raspberry Pi can be disabled or remapped using the hardware jumpers.
 The hardware jumpers are 0603 size 0 ohm resistors that can be unsoldered from the board. 
 Thin wires can then be soldered to the resistor pads for routing the peripherals to desired GPIO pins.
+
+
+</div>
