@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-weight: 20
+weight: 200
 ---
 
 ## Hardware assembly

@@ -1,6 +1,6 @@
 ---
 title: Hardware revisions
-weight: 43
+weight: 500
 ---
 
 ## Introduction

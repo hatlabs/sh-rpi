@@ -1,7 +1,7 @@
 ---
 linkTitle: Hardware
 title: Hardeware Description
-weight: 30
+weight: 300
 ---
 
 ## Tour Around the Board
