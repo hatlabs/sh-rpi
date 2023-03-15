@@ -67,11 +67,11 @@ The automated installation script will:
 - install the SH-RPi service software
 
 
-{{% alert title="Note" color="info" %}}
+{{% pageinfo color="info" %}}
 The sections below are still heavily under construction and will be updated as the enclosure options become available.
-{{% /alert %}}
+{{% /pageinfo %}}
 
-<div class="-text-500">
+<div style="-moz-filter: opacity(30%); -webkit-filter: opacity(30%); filter: opacity(30%);">
 
 ## Enclosures
 

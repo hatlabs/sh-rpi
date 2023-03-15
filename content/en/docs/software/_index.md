@@ -7,7 +7,7 @@ weight: 400
 This section has not yet been updated to reflect the v2 hardware changes.
 {{% /pageinfo %}}
 
-<div class="-text-500">
+<div style="-moz-filter: opacity(30%); -webkit-filter: opacity(30%); filter: opacity(30%);">
 
 ## Introduction
 
