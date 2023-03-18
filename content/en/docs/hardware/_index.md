@@ -83,63 +83,70 @@ SH-RPi connectors, bottom side.
 7. CR1220 battery connector for real-time clock (on the bottom side).
    The real-time clock requires a CR1220 backup battery to keep time when the system is powered off.
    The battery must be oriented positive (flatter) side away from the board.
+8.  RTC Enable solder jumper. 
+    The Real-time clock is enabled by default.
+    To disable the RTC, cut the traces between the solder jumper pads with a sharp knife.
+    Be careful to not cut any nearby traces.
+9.  GPIO4 Enable. Connect the pads to connect Raspberry Pi GPIO4 to onboard microcontroller port PB5.
+    This requires custom firmware functionality to be useful.
 
 
-{{% pageinfo color="warning" %}}
-The content below has not yet been updated to reflect v2 hardware changes.
-{{% /pageinfo %}}
-
-<div style="-moz-filter: opacity(30%); -webkit-filter: opacity(30%); filter: opacity(30%);">
 
 ## Power Supply
 
-The SH-RPi includes an integrated power supply subsystem that provides a clean power supply to the Raspberry Pi from a noisy power source, like a boat's "house" battery system.
-The power supply permits input voltages between 8-32 V (although the output will be disabled if the input is less than 10V, to protect the vessel batteries from deep discharging).
+The SH-RPi includes an integrated power supply subsystem that provides a clean power supply to the Raspberry Pi from a noisy power source such as unregulated power supplies or a boat's "house" battery system. The power supply permits input voltages between 9-32 V, although a potential less than 10 V will be regarded as an undervoltage situation to prevent deep-discharge damage to typical lead-acid batteries.
 
-The input current is limited to a maximum of 0.8 A at 12 V.
-Above that limit, a current limiting circuit starts throttling the buck converter to control the maximum current drawn from the power input.
+The operational diagram of the power supply subsystem is shown in the picture below.
 
-The power supply output voltage is normally at 5.1 V.
-The maximum steady-state output current is about 1.2 A, or about twice the current consumption of a Raspberry Pi 4B. Maximum output currents over 3 A can be sustained over several hundred milliseconds.
+The maximum input current is restricted to protect upstream power supplies and wiring. The default current limit is 0.8 A, but the limit can be increased to 1.8 A or 2.8 A by placing jumpers on the current limiter header.
+
+The input voltage is stepped down by the first stage buck converter to charge the supercapacitor bank up to a voltage of 8.8 V. The supercapacitors are used to provide a power reservoir for the Raspberry Pi, both for short-duration glitches and to provide last-resort power during a system shutdown.
+
+The second stage buck converter converts the supercapacitor voltage into the 5V Raspberry Pi input voltage. The 5 V output is enabled by the microcontroller when the supercapacitor voltage is above 8.0 V and disabled when the supercapacitor voltage drops below 5.0 V. These limits can be configured by the user.
+
+The maximum peak current output to the Raspberry Pi is 5 A. The maximum average current output is subject to the input current limiter setting and ambient temperature. At 0.8 A input current limit, the maximum sustained output current is about 1.4 A. At 2.8 A input current limit setting, the maximum average output current is limited by the system thermal characteristics. In an open space at room temperature, the maximum average 5 V output current is at least 3.0 A. 
+
+In comparison, the average current draw of a Raspberry Pi 4B is about 0.48 A when idle and 0.89 A at 100% CPU load.
+
+At 1.4 A output current, the total power supply efficiency is 79%.
+
+{{< imgrel "psu_diagram.svg" "80%" >}}
+Power supply operation diagram with example current and voltage values.
+{{< /imgrel >}}
+
 
 ## Peripherals
 
 ### LEDs
 <a name="sec_leds"></a>
 
-{{< imgrel "SH-RPi-1.0.0-leds.jpg" "50%" >}}
-SH-RPi indicator LEDs.
-{{< /imgrel >}}
+The SH-RPi LED array at the left side of the board is used to indicate the operational status of the board.
+The base bar display indicates the charge state of the supercapacitor bank. The first LED begins to light up when the voltage is above 5 V and all LEDs are fully lit at 9 V supercapacitor potential.
 
-SH-RPi includes a number of LEDs to indicate the state of operation.
+Overlaid on the bar display, different blink patterns indicate the state of the board as follows.
 
-1. Main LED array
-2. CAN power (on whenever input voltage is present at the CAN power pins)
-3. CAN receive and transmit (blink whenever data is received or transmitted over the CAN bus)
+| Pattern | Description |
+|---------|-------------|
+| No blinking | Charging/normal operation (1) |
+| Short blip off every 4 s | Watchdog active (2)  |
+| Roll to left | No input voltage (3) |
+| Two blips off with 1 s pause| Shutting down (4) |
+| Two blinks on with 2 s pause | Sleeping (5) |
+| Alternating LEDs blinking| Watchdog reboot (6) |
+| Rapid blinking | Fault - contact manufacturer (7) |
 
-The main LED array LEDs are as follows:
+Detailed description of the states follows:
 
-- Vin: A green LED that indicates the 12/24V input voltage. The LED states are:
-   * Vin < 10 V: LED off
-   * 10 V < Vin < 11.5 V: LED blinking 50% on/off
-   * Vin > 11.5 V: LED solid on
-- 5V: Red LED solid on when 5V is enabled by the microcontroller
-- Vcap: Green LED that blinks according to the supercapacitor voltage. 100% off is 0 V, 100% on is 2.75 V.
-- Status: Different blink patterns indicate the state of the board as follows.
+1. The supercapacitors are charging and if the supercap voltage is above 8.0 V, the 5 V output is enabled.
+   The Raspberry Pi OS daemon is not active.
+2. The daemon is active and the watchdog is enabled. The operating system has started up and is running normally.
+3. Power input is lost and the supercapacitors are depleting. The 5 V output is enabled.
+4. The daemon has initiated a shutdown. The SH-RPi is waiting for the Raspberry Pi to shut down.
+5. The SH-RPi is in a sleep state. The 5 V output is disabled and the board is waiting for a real-time clock alarm to wake up.
+6. SH-RPi did not receive a heartbeat from the daemon for 10 s, suggesting that the Pi has crashed.
+   The Raspberry Pi is reset by turning 5 V off for two seconds.
+7. The SH-RPi has detected a supercapacitor overvoltage condition. Contact the manufacturer for further assistance.
 
-{{< imgrel "blink_patterns.png" "75%" >}}
-Blink patterns
-{{< /imgrel >}}
-
-Different board statuses are:
-- Charging: the supercapacitor is charging but the voltage is too low to turn the 5V output on
-- On: 5V output is turned on
-- Watchdog enabled: 5V output is on, watchdog is enabled
-- Watchdog reboot: The daemon has not communicated in 10 seconds; the Raspberry Pi is reset by turning 5V off for two seconds
-- Depleting: Input voltage is not present and the supercapacitor is depleting
-- Shutting down: The daemon has requested a shutdown; the watchdog is turned off and the firmware waits until the kernel is shut down (as indicated by SDA being set low)
-- Off: 5V is turned off and the board is expected to be powered off.
-If the board remains powered, it will restart in 5 seconds.
 
 ### I2C
 
@@ -148,7 +155,7 @@ It uses two data wires in addition to voltage and ground.
 
 The SH-RPi microcontroller communicates with the Raspberry Pi operating system over I2C. The microcontroller uses I2C address 0x6d.
 
-If the optional DS3231 real-time clock is installed, it additionally reserves the I2C address 0x68. 
+The PCF8563 real-time clock additionally reserves the I2C address 0x51.
+When using the SH-RPi board with a built-in RTC, the RTCs may have conflicting I2C addresses.
+In such a case, the RTC on the SH-RPi can be disabled by cutting the traces between the RTC EN solder jumper pads.
 
-
-</div>
