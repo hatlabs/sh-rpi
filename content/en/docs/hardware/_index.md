@@ -148,3 +148,16 @@ The Sailor Hat for Raspberry Pi can be configured by the user to adapt to specif
    The watchdog timer can be enabled or disabled with a solder jumper.
 4. GPIO4 enable.
    Connect the pads to connect Raspberry Pi GPIO4 to the onboard microcontroller port PB5. This requires custom firmware functionality to be useful.
+
+## I2C
+
+### I2C
+
+Sailor Hat communicates with the Raspberry Pi 
+using I2C bus 1 on GPIO pins 3 and 5. (GPIO2 and GPIO3, respectively).
+The I2C address is 0x6d.
+
+The PCF8563 real-time clock additionally reserves the I2C address 0x51 on the same bus.
+When using the SH-RPi board with a built-in RTC, the RTCs may have conflicting I2C addresses.
+In such a case, the RTC on the SH-RPi can be disabled by cutting the traces between the RTC EN solder jumper pads.
+
