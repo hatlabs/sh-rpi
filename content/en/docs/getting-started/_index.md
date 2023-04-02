@@ -69,9 +69,167 @@ The automated installation script will:
 
 If you plan to use your Raspberry Pi and SH-RPi outdoors, in a vehicle or on a boat, or in highly condensing environments, always place the device in a waterproof enclosure!
 Hat Labs
-offers a variety of [waterproof enclosures](https://shop.hatlabs.fi/collections/accessories-enclosures), some with pre-drilled holes for standard connectors.
+offers a variety of [waterproof enclosures](https://shop.hatlabs.fi/collections/accessories-enclosures).
 
-**Note:** Images and technical drawings of the different enclosures will be added here once they are available.
+The medium and large enclosures come with a perforated base plate and mount adapters that can be used to mount the Raspberry Pi, additional HATs and other components.
+Other enclosures are provided with 3D printed sticker mounts.
+
+### Medium Enclosure Build
+
+The medium size enclosure is designed to fit the Raspberry Pi 4 Model B, the SH-RPi and multiple HATs in a vertical orientation. Installation is described below.
+
+#### Assembly
+
+We start with a bare enclosure, shown in the following figure.
+
+{{< imgrel "01_bare_box.jpg" "50%" >}}
+Enclosure without any of the components.
+{{< /imgrel >}}
+
+First, install all connectors you need. Before installing the connectors, you may need to solder wires to them. Soldering instructions for cup terminals can be found in this YouTube video:
+
+{{< youtube w7Ft2ymGmfc >}}
+
+There is no real standard for the power connector pinouts, but we suggest to always connect GND to pin 1 and +12V/24V to pin 2. The following figure shows the power connector installed.
+
+Then, insert the connectors into the enclosure. The following figure shows the connectors installed.
+
+{{< imgrel "02_conx.jpg" "50%" >}}
+Connectors installed.
+{{< /imgrel >}}
+
+If the enclosure is to be used in a condensing environment such as on a boat or outdoors, seal the remaining holes with plugged cable glands. The following figure shows how the plug should be installed in the cable glands.
+
+{{< imgrel "03_gland_plug.jpg" "50%" >}}
+Cable gland plug.
+{{< /imgrel >}}
+
+And the following figure shows the cable glands installed. This makes the enclosure waterproof.
+
+{{< imgrel "04_conx_plugs.jpg" "50%" >}}
+Cable glands installed.
+{{< /imgrel >}}
+
+Next, we take the parts we want to install in the enclosure and place them on the base plate. The following figure shows the parts we will install. The black plastic parts are the vertical mounts that hold the PCB stack in place.
+
+{{< imgrel "05_ingredients.jpg" "50%" >}}
+Ingredients.
+{{< /imgrel >}}
+
+First, the 6mm hex standoffs are screwed into the vertical mounts. Hand tigthen only!.
+
+The following figure shows the vertical mounts with the standoffs installed.
+
+{{< imgrel "06_vertical_mounts.jpg" "50%" >}}
+Vertical mounts with hex standoffs.
+{{< /imgrel >}}
+
+You can then attach the mounts to the Raspberry Pi or the base board. Use the M2.5 screws to attach the board next to the GPIO pins and the M2.5 16mm hex standoffs on the opposite side.
+
+Next, we install the stack-through header onto the SH-RPi. Press gently and evenly to avoid bending the pins. The optimal header height depends on the HAT ordering. If you insert the SH-RPi directly on top of the Raspberry Pi, remove the spacer from the stack-through header. On the other hand, the spacer is needed if you install the SH-RPi on top of another interface HAT.
+
+{{< imgrel "07_stack_thru_conx.jpg" "50%" >}}
+Inserting the stack-through header.
+{{< /imgrel >}}
+
+The next figure shows the SH-RPi mounted on the base board.
+
+{{< imgrel "08_shrpi_mounted.jpg" "50%" >}}
+SH-RPi mounted on the base board.
+{{< /imgrel >}}
+
+#### Power Wiring
+
+In this walkthrough, we will also install an additional CAN HAT for NMEA 2000 connectivity. The following figure shows the CAN HAT mounted on the SH-RPi.
+
+{{< imgrel "09_can_mounted.jpg" "50%" >}}
+CAN HAT mounted on the SH-RPi.
+{{< /imgrel >}}
+
+The next step is to install the PCB stack on the base plate. Use the provided M3 screws to secure the stack in place. Do not overtigthen the screws.
+
+{{< imgrel "10_on_base_mount.jpg" "50%" >}}
+PCB stack installed on the base plate.
+{{< /imgrel >}}
+
+Next, strip the connector wires. If a separate power connector is used, the NMEA 2000 red wire should be left unstripped or cut off altogether. The following figure shows the stripped wires.
+
+{{< imgrel "13_stripped_wires.jpg" "50%" >}}
+Stripped power and CAN wires.
+{{< /imgrel >}}
+
+The next step is to connect the wires to the PCB connectors. The power connector should be connected to the terminal plug as shown in the following figure.
+
+When you plug in the terminal plug, be _very_ careful to plug it to the input connector on the SH-RPi. You may damage all devices on the stack if you plug it to the 5V output connector!
+
+{{< imgrel "14_power_conx.jpg" "50%" >}}
+Power connector terminal plug arrangement.
+{{< /imgrel >}}
+
+Then, the CAN wires should be connected to the CAN HAT connector CAN0 as shown below. Black is ground, white is CAN high (H) and blue is CAN low (L).
+
+{{< imgrel "15_wires_plugged.jpg" "50%" >}}
+Final wiring arrangement.
+{{< /imgrel >}}
+
+#### Powering from NMEA 2000
+
+When using on a boat, you can also power the system from the NMEA 2000 network. In this case, all wires from the NMEA 2000 connector are used.
+
+{{< imgrel "18_alt_can_wires.jpg" "50%" >}}
+When powering the device from the NMEA 2000 network, all wires from the NMEA 2000 connector are used.
+{{< /imgrel >}}
+
+The black and red wires are connected to the power terminal plug, with a short piece of black wire spliced to GND terminal as shown in the following figure. The short black wire connects to the GND terminal of the CAN HAT CAN0 connector.
+
+{{< imgrel "19_spliced_gnd.jpg" "50%" >}}
+Connect the NMEA 2000 GND wire to both the power terminal plug and the CAN HAT CAN0 connector.
+{{< /imgrel >}}
+
+The next figure shows the final wiring arrangement when powering the device from the NMEA 2000 network.
+
+{{< imgrel "20_can_power_wiring.jpg" "50%" >}}
+Final wiring arrangement when powering the device from the NMEA 2000 network.
+{{< /imgrel >}}
+
+#### Securing the Stack
+
+Finally, the loose end of the stack can be secured to the base plate using small zip ties, but as an alternative, simple tie wraps are a simple and easy to use alternative. The following two figures show the tie wrap installation.
+
+{{< imgrel "11_tie_wraps.jpg" "50%" >}}
+Tie wraps inserted.
+{{< /imgrel >}}
+
+{{< imgrel "12_tie_wraps_2.jpg" "50%" >}}
+Finished tie wrap installation.
+{{< /imgrel >}}
+
+#### Finishing the Assembly
+
+At this point, the base plate can be inserted into the enclosure.
+
+{{< imgrel "16_in_place.jpg" "50%" >}}
+Base plate in place.
+{{< /imgrel >}}
+
+Secure the base plate to the enclosure with the provided screws.
+
+{{< imgrel "17_screw_base_mount.jpg" "50%" >}}
+Screwing the base plate to the enclosure.
+{{< /imgrel >}}
+
+Finally, the assembly is done. The figure below shows the setup happily blinking away in the enclosure.
+
+{{< imgrel "21_all_done.jpg" "50%" >}}
+The finished setup.
+{{< /imgrel >}}
+
+The enclosure can be mounted to a wall or a bulkhead through the corner holes shown in the figure below.
+
+{{< imgrel "22_mounting.jpg" "50%" >}}
+Mounting hole locations.
+{{< /imgrel >}}
+
 
 ### Drilling holes
 
