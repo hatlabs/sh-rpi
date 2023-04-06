@@ -29,3 +29,9 @@ GNSS HAT software installation will be automated using the Sailor Hat installati
 As of now, you need to configure the GNSS HAT manually according to the instructions on the [Waveshare MAX-M8Q GNSS HAT wiki page](https://www.waveshare.com/wiki/MAX-M8Q_GNSS_HAT). You do not need the steps beyond `gpsd` configuration.
 
 Depending on the configuration, the GNSS HAT will provide a serial device `/dev/ttyAMA0` or `/dev/ttyS0` for NMEA 0183 data. OpenPlotter has a nifty serial device configuration utility which can be used to set up and connect the GNSS HAT to Signal K.
+
+## Backup Battery
+
+The GNSS HAT features a backup battery connector. The backup battery is used to store ephemeris information in case the Raspberry Pi is powered off. The backup battery is not mandatory but will speed up the time it takes to get a GNSS fix after powering on the Raspberry Pi.
+
+The backup battery type is ML1220. It is a rechargeable Lithium cell and must **not** be replaced with a non-rechargeable battery. Doing so will result in a risk of explosion and fire! Advanced users can, at their own risk, remove the R3 resistor to disable the charging functionality to use a non-rechargeable CR1220 battery. The schematics and PCB layout are available at the [Waveshare wiki page](https://www.waveshare.com/wiki/MAX-M8Q_GNSS_HAT).
