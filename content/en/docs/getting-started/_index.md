@@ -63,6 +63,10 @@ The automated installation script will:
 - if support for the NMEA 0183 interface add-on card is selected
   - enable the SPI interface and a device overlay
 - enable the device overlay for the real-time clock
+- if support for the MAX-M8Q GNSS HAT is selected
+  - enable the serial UART interface
+  - disable the serial console
+  - disable Bluetooth as it conflicts with the serial UART interface
 - install the SH-RPi service software
 
 ## Enclosures
