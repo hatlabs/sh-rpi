@@ -11,6 +11,10 @@ cascade:
     path: "/**"
 ---
 
+{{% pageinfo color="primary" %}}
+Looking for the old Sailor Hat for Raspberry Pi v1.0.0 documentation? It's available at [docs.hatlabs.fi/sh-rpi-v1](https://docs.hatlabs.fi/sh-rpi-v1/).
+{{% /pageinfo %}}
+
 The Sailor Hat for Raspberry Pi (SH-RPi) is a versatile power management board designed for the Raspberry Pi and similar single-board computers. With the SH-RPi connected, you can create deeply integrated servers that shut down safely when power is turned off and wake up automatically when power is restored.
 
 SH-RPi supports all Raspberry Pi models with a 40-pin GPIO header (every model since the Pi 1 Model B+). Additionally, it is compatible with Raspberry Pi Compute Module 4 boards and other single-board computers that have a 40-pin Raspberry Pi-compatible GPIO header or an external I2C interface with a 5V power input.
