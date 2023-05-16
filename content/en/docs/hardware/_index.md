@@ -38,7 +38,7 @@ Functional blocks of the SH-RPi.
    - Receives real-time clock interrupt information
    - Communicates the SH-RPi status to the Raspberry Pi service over I2C
 5. Second stage buck converter.
-   The buck converter converts the supercapacitor bank potential into the 5V Raspberry Pi input voltage.
+   The buck converter converts the supercapacitor bank potential into the 5V Raspberry Pi input voltage. The maximum instantaneous output current capacity is 5 A, with at least 3 A attainable as continuous current without active cooling.
    The buck converter operation is controlled by the microcontroller. The microcontroller enables the boost converter when the supercapacitor voltage has risen above 8.0 V.
    During system shutdown or watchdog reboot, the microcontroller disables the boost converter to cut the Raspberry Pi input voltage.
 6. Status LED array.

@@ -26,6 +26,7 @@ Sailor Hat for Raspberry Pi v2.0.0.
 ## Key Features
 
 - **Wide voltage range input**: Safely power your Raspberry Pi using a 12V or 24V power system commonly found in vehicles and boats. The SH-RPi has a 9-32V input range with additional filtering and surge protection.
+- **High output current capacity**: 3A of continuous output current at 5V (subject to environment temperature), with peak currents up to 5A. With active cooling, 4A of continuous output current is possible. The SH-RPi can power even the most demanding Raspberry Pi setups.
 - **Power glitch resilience**: Integrated supercapacitors ensure intermittent power outages are ignored, keeping your server running during brownouts or power glitches.
 - **NMEA 2000 bus compatibility**: Power your Raspberry Pi directly from the NMEA 2000 bus. SH-RPi includes a current-limiting circuit, limiting the maximum input current to approximately 0.8A. The supercapacitors provide peak power capability for power-hungry devices like screens and SSD drives.
 - **Safe shutdown**: The Raspberry Pi is informed about power outages and shuts down safely, powered by the supercapacitors. This eliminates the risk of corrupted SD cards.
