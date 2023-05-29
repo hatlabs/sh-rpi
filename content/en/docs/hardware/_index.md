@@ -38,7 +38,7 @@ Functional blocks of the SH-RPi.
    - Receives real-time clock interrupt information
    - Communicates the SH-RPi status to the Raspberry Pi service over I2C
 5. Second stage buck converter.
-   The buck converter converts the supercapacitor bank potential into the 5V Raspberry Pi input voltage.
+   The buck converter converts the supercapacitor bank potential into the 5V Raspberry Pi input voltage. The maximum instantaneous output current capacity is 5 A, with at least 3 A attainable as continuous current without active cooling.
    The buck converter operation is controlled by the microcontroller. The microcontroller enables the boost converter when the supercapacitor voltage has risen above 8.0 V.
    During system shutdown or watchdog reboot, the microcontroller disables the boost converter to cut the Raspberry Pi input voltage.
 6. Status LED array.
@@ -100,31 +100,54 @@ The maximum input current is restricted to protect upstream power supplies and w
 
 The input voltage is stepped down by the first stage buck converter to charge the supercapacitor bank up to a voltage of 8.8 V. The supercapacitors are used to provide a power reservoir for the Raspberry Pi, both for short-duration glitches and to provide last-resort power during a system shutdown.
 
-The second stage buck converter converts the supercapacitor voltage into the 5V Raspberry Pi input voltage. The 5 V output is enabled by the microcontroller when the supercapacitor voltage is above 8.0 V and disabled when the supercapacitor voltage drops below 5.0 V. These limits can be configured by the user.
+The second stage buck converter converts the supercapacitor voltage into the 5 V Raspberry Pi input voltage. The 5 V output is enabled by the microcontroller when the supercapacitor voltage is above 8.0 V and disabled when the supercapacitor voltage drops below 5.0 V. These limits can be configured by the user.
 
 The maximum peak current output to the Raspberry Pi is 5 A. The maximum average current output is subject to the input current limiter setting and ambient temperature. At 0.8 A input current limit, the maximum sustained output current is about 1.4 A. At 2.8 A input current limit setting, the maximum average output current is limited by the system thermal characteristics. In an open space at room temperature, the maximum
-   average output current is about 4.2 A.
+   average 5 V output current is at least 3.0 A. Higher values are possible with active cooling of the SH-RPi board.
+
+At 1.4 A output current, the total power supply efficiency is 79%.
+
+{{< imgrel "psu_diagram.svg" "70%" >}}
+Power supply operation diagram with example current and voltage values.
+{{< /imgrel >}}
 
 ## Status LEDs
 
-The SH-RPi includes a status LED array that indicates the operational status of the system. The LED array consists of four LEDs:
+The SH-RPi LED array at the left side of the board is used to indicate the operational status of the board.
+The bar display indicates the charge state of the supercapacitor bank. The first LED begins to light up when the voltage is above 5 V and all LEDs are fully lit at 9 V supercapacitor potential.
 
-1. Green: Power good.
-   The green LED is on when the supercapacitor voltage is above 8.0 V, which corresponds to the 5V output being enabled.
-2. Yellow: Charging.
-   The yellow LED is on when the supercapacitor voltage is below 8.8 V and the input current is below the current limiter setpoint.
-3. Red: Current limit.
-   The red LED is on when the input current is above the current limiter setpoint.
-4. Blue: Undervoltage lockout.
-   The blue LED is on when the input voltage is below 10 V.
+Overlaid on the bar display, different blink patterns indicate the state of the board as follows.
+
+| Pattern | Description |
+|---------|-------------|
+| No blinking | Charging/normal operation (1) |
+| Short blip off every 4 s | Watchdog active (2)  |
+| Roll to left | No input voltage (3) |
+| Two blips off with 1 s pause| Shutting down (4) |
+| Two blinks on with 2 s pause | Sleeping (5) |
+| Alternating LEDs blinking| Watchdog reboot (6) |
+| Rapid blinking | Fault - contact manufacturer (7) |
+
+Detailed description of the states follows:
+
+1. The supercapacitors are charging and if the supercap voltage is above 8.0 V, the 5 V output is enabled.
+   The Raspberry Pi OS daemon is not active.
+2. The daemon is active and the watchdog is enabled. The operating system has started up and is running normally.
+3. Power input is lost and the supercapacitors are depleting. The 5 V output is enabled.
+4. The daemon has initiated a shutdown. The SH-RPi is waiting for the Raspberry Pi to shut down.
+5. The SH-RPi is in a sleep state. The 5 V output is disabled and the board is waiting for a real-time clock alarm to wake up.
+6. SH-RPi did not receive a heartbeat from the daemon for 10 s, suggesting that the Pi has crashed.
+   The Raspberry Pi is reset by turning 5 V off for two seconds.
+7. The SH-RPi has detected a supercapacitor overvoltage condition. Contact the manufacturer for further assistance.
+
 
 ## Watchdog Reboot Functionality
 
-In addition to the power supply, the Sailor Hat for Raspberry Pi incorporates a hardware watchdog timer that can be used to reboot the Raspberry Pi in the case of a software or hardware lockup. The watchdog timer is enabled by default and can be disabled with a solder jumper if needed. When enabled, the watchdog timer will restart the Raspberry Pi if it doesn't receive a "heartbeat" signal from the Raspberry Pi within a predetermined time interval (typically 120 seconds).
+In addition to the power supply, the Sailor Hat for Raspberry Pi incorporates a hardware watchdog timer that can be used to reboot the Raspberry Pi in the case of a software or hardware lockup. The watchdog timer is enabled by default and can be disabled with a solder jumper if needed. When enabled, the watchdog timer will restart the Raspberry Pi if it doesn't receive a "heartbeat" signal from the Raspberry Pi within a predetermined time interval (typically 10 seconds).
 
 The Raspberry Pi must run a service that sends a periodic heartbeat signal to the SH-RPi. The service can be installed from the provided software package.
 
-If the watchdog timer triggers a reboot, the SH-RPi will disable the 5V output for a short period to force a Raspberry Pi restart. The SH-RPi will then re-enable the 5V output to allow the Raspberry Pi to boot up again.
+If the watchdog timer triggers a reboot, the SH-RPi will disable the 5V output for a short period to force a Raspberry Pi restart. The SH-RPi will then re-enable the 5 V output to allow the Raspberry Pi to boot up again.
 
 ## Real-Time Clock
 
@@ -132,9 +155,8 @@ The SH-RPi includes a PCF8563 real-time clock (RTC) that can provide accurate ti
 
 To use the RTC, a CR1220 backup battery must be installed on the bottom side of the board. The positive side (the flatter side) of the battery should be facing away from the board.
 
-The RTC can be enabled or disabled with a solder jumper. By default, the RTC is enabled.
-
-A software package is provided to configure and synchronize the Raspberry Pi system time with the RTC.
+When using the SH-RPi board with a built-in RTC, the RTCs may have conflicting I2C addresses.
+In such a case, the RTC on the SH-RPi can be disabled by cutting the traces between the RTC EN solder jumper pads.
 
 ## Configuration
 
@@ -151,13 +173,8 @@ The Sailor Hat for Raspberry Pi can be configured by the user to adapt to specif
 
 ## I2C
 
-### I2C
-
 Sailor Hat communicates with the Raspberry Pi 
 using I2C bus 1 on GPIO pins 3 and 5. (GPIO2 and GPIO3, respectively).
 The I2C address is 0x6d.
 
 The PCF8563 real-time clock additionally reserves the I2C address 0x51 on the same bus.
-When using the SH-RPi board with a built-in RTC, the RTCs may have conflicting I2C addresses.
-In such a case, the RTC on the SH-RPi can be disabled by cutting the traces between the RTC EN solder jumper pads.
-

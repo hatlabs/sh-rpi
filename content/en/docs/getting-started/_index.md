@@ -3,7 +3,7 @@ title: Getting Started
 weight: 200
 ---
 
-## Hardware assembly
+## Hardware Assembly
 
 SH-RPi is delivered fully assembled. The hardware installation steps are:
 
@@ -28,14 +28,15 @@ Connect the power source to the connector circled in green.
 {{< /imgrel >}}
 
 The power source must be rated for at least 1.0 A current at the specified output voltage.
-If possible, choose a power supply with a higher output voltage, such as 24 V, for slightly more efficient operation. Otherwise, 12 V power systems on boats and vehicles, or DC power sources, work well.
+All things being equal, a power supply with a higher output voltage, such as 24 V, will result in slightly more efficient operation.
+Otherwise, 12 V power systems on boats and vehicles, or DC power sources, work well.
 
 ## Software Installation
 
 Additional software is required for the Raspberry Pi OS to run the system service that will automatically initiate system shutdown when power is cut.
 An automated installation script is provided to simplify the installation process.
 
-### Automated installation
+### Automated Installation
 
 An automated installation script is provided. The script is tested on newly flashed Raspberry Pi OS and may fail on heavily modified systems.
 Installation has not been tested on other operating systems.
@@ -235,7 +236,7 @@ Mounting hole locations.
 {{< /imgrel >}}
 
 
-### Drilling holes
+### Drilling Holes
 
 If you're using an enclosure without pre-drilled holes, you'll need to drill the holes yourself.
 
@@ -264,15 +265,13 @@ Suitable hole sizes for different connectors:
 
 The enclosures provided by Hat Labs include mounting adapters that can be used to mount the Raspberry Pi.
 
-**Note:** Add images of the different mounting adapters once they are finished.
-
-### Soldering the panel connectors
+### Soldering the Panel Connectors
 
 When soldering the internal wires to the panel connectors, always use heat shrink tubing on the individual wires.
 Always remember to slide the heat shrink onto the wires _before_ soldering...
-Usually, you can first add solder to the connector pin cavity, then re-melt the solder and insert the wire.
+Usually, you can first add solder to the connector pin cavity and then re-melt the solder and insert the wire.
 
-### Connecting a fan
+### Connecting a Fan
 
 Placing a fan inside the enclosure is recommended to improve air circulation and heat transfer through the enclosure
 surfaces.
@@ -284,12 +283,12 @@ The fan should be connected to the generic 5V output connector on the SH-RPi:
 Connect the fan to the connector indicated by the red arrow.
 {{< /imgrel >}}
 
-### Finalizing installation
+### Finalizing Installation
 
 Once you have completed drilling holes, mounting the Raspberry Pi, soldering the panel connectors, and connecting the fan, close the enclosure to protect your SH-RPi and Raspberry Pi from the elements. Ensure that all connections are secure and the enclosure is tightly sealed to prevent water ingress.
 
-### Testing the system
+### Testing the System
 
 After completing the installation, power up your Raspberry Pi and SH-RPi system to ensure that everything is functioning correctly. Check that the Raspberry Pi boots up, the fan is operating, and the SH-RPi is communicating with the Raspberry Pi. Once you have verified that everything is working, you can proceed with configuring your software and integrating the system into your intended environment.
 
-Congratulations! You have successfully completed the hardware assembly and enclosure setup for your SH-RPi and
+Congratulations! You have successfully completed the hardware assembly and enclosure setup for your SH-RPi and Raspberry Pi system.
