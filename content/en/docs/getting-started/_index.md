@@ -93,7 +93,7 @@ Enclosure without any of the components.
 
 First, install all connectors you need. Before installing the connectors, you may need to solder wires to them. Soldering instructions for cup terminals can be found in this YouTube video:
 
-{{< youtube w7Ft2ymGmfc >}}
+{{< youtube _GLeCt_u3U8 >}}
 
 There is no real standard for the power connector pinouts, but we suggest to always connect GND to pin 1 and +12V/24V to pin 2. The following figure shows the power connector installed.
 
