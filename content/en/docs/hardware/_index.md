@@ -79,6 +79,7 @@ SH-RPi connectors, bottom side.
    The header can be used to program the microcontroller with an external programmer or to enable onboard programming.
 5. Current limiter header.
    Jumpers can be placed on the current limiter header to change the current limit setting to 1.8 A or 2.8 A (the default is 0.8 A).
+   Place a jumper horizontally on the top row (labelled 2A) to set the current limit to 1.8 A. Place a jumper horizontally on the bottom row (labelled 3A) to set the current limit to 2.8 A.
 6. External interrupt header. Not functional in v2.0.0 hardware.
 7. CR1220 battery connector for real-time clock (on the bottom side).
    The real-time clock requires a CR1220 backup battery to keep time when the system is powered off.
