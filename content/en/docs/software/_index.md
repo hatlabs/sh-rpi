@@ -49,21 +49,6 @@ Then, configure the kernel to signal the Sailor Hat on power off:
 
 Again, write the file by pressing Ctrl-O and exit Nano by pressing Ctrl-X.
 
-## Raspberry Pi configuration file changes for the RTC
-
-Raspberry Pi doesn't have a real-time clock by default.
-Instead, the system implements a "fake hwclock" that fetches the current time from the internet and then saves the time to a file at regular intervals. The time is then set from that file at boot to avoid things such as filesystem checks at every boot.
-
-If your SH-RPi has a real-time clock, this fake hwclock functionality needs to be disabled and replaced with actual hwclock calls. These six commands do the trick:
-
-```bash
-sudo apt-get update
-sudo apt-get -y remove fake-hwclock
-sudo update-rc.d -f fake-hwclock remove
-sudo systemctl disable fake-hwclock
-sudo sed -i -e "s,^\(if \[ \-e /run/systemd/system \] ; then\),if  false; then\n#\1," /lib/udev/hwclock-set
-```
-
 ## Raspberry Pi daemon
 
 To make the Raspberry Pi OS aware of the power state, a daemon (service software) needs to be installed.
