@@ -11,12 +11,12 @@ For manual installation, download the code at [github.com/hatlabs/SH-RPi-daemon]
 
 ### Enabling I2C and SPI
 
-The I2C and SPI interfaces need to be enabled. This can be done either by running `raspi-config` or by editing `/boot/config.txt` directly.
+The I2C and SPI interfaces need to be enabled. This can be done either by running `raspi-config` or by editing `/boot/firmware/config.txt` directly.
 
 If you use `raspi-config`, skip until the end of this subsection.
 
 ```bash
-sudo nano /boot/config.txt
+sudo nano /boot/firmware/config.txt
 ```
 
 Find the following line:
@@ -33,9 +33,9 @@ dtparam=i2c_arm=on
 
 ### Enabling the new interfaces
 
-Again, edit `/boot/config.txt`:
+Again, edit `/boot/firmware/config.txt`:
 
-    sudo nano /boot/config.txt
+    sudo nano /boot/firmware/config.txt
 
 Scroll down to the `[all]` section.
 
@@ -151,7 +151,7 @@ Note! For proper operation afterwards, it is essential that you remove at least 
 The next step is to enable the serial UARTs on the Raspberry Pi. They are used for both the UPDI and serial debugging interfaces.
 On Bluetooth-enabled Pis, the UART is normally reserved by the onboard Bluetooth circuitry. So, let's disable Bluetooth.
 
-Add the following lines at the end of `/boot/config.txt`:
+Add the following lines at the end of `/boot/firmware/config.txt`:
 
 ``ìni
 dtoverlay=disable-bt
@@ -209,9 +209,9 @@ The white status LEDs will turn off during the flashing. After a few seconds, th
 
 #### Restoring Bluetooth
 
-If you want to keep using Bluetooth, remember to undo the steps you made previously. To do this, you'll need to reverse the changes you made to `/boot/config.txt`, `/boot/cmdline.txt`, and re-enable the `hciuart` service:
+If you want to keep using Bluetooth, remember to undo the steps you made previously. To do this, you'll need to reverse the changes you made to `/boot/firmware/config.txt`, `/boot/cmdline.txt`, and re-enable the `hciuart` service:
 
-1. Remove the following lines from `/boot/config.txt`:
+1. Remove the following lines from `/boot/firmware/config.txt`:
 
 ```ìni
 dtoverlay=disable-bt
