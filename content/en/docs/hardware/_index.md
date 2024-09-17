@@ -12,7 +12,7 @@ Different functional blocks of the Sailor Hat for Raspberry Pi are described bel
 Functional blocks of the SH-RPi.
 {{< /imgrel >}}
 
-1. Power input and protection. 
+1. Power input and protection.
    Power input is provided through a Phoenix MC compatible 3.81 mm (0.15") pitch connector.
    The permitted voltage range is 9-32V.
    The protection circuitry at power input includes:
@@ -63,11 +63,11 @@ SH-RPi connectors, top side.
 SH-RPi connectors, bottom side.
 {{< /imgrel >}}
 
-   </div>   
+   </div>
 </div>
 
 1. Power input connector.
-  
+
    The power connector is a Phoenix MC compatible 3.81 mm (0.15") pitch connector.
    The sales package includes a compatible screw terminal plug.
 2. 5V output connector.
@@ -84,7 +84,7 @@ SH-RPi connectors, bottom side.
 7. CR1220 battery connector for real-time clock (on the bottom side).
    The real-time clock requires a CR1220 backup battery to keep time when the system is powered off.
    The battery must be oriented positive (flatter) side away from the board.
-8. RTC Enable solder jumper. 
+8. RTC Enable solder jumper.
    The Real-time clock is enabled by default.
    To disable the RTC, cut the traces between the solder jumper pads with a sharp knife.
    Be careful to not cut any nearby traces.
@@ -144,7 +144,7 @@ Detailed description of the states follows:
 
 ## Watchdog Reboot Functionality
 
-In addition to the power supply, the Sailor Hat for Raspberry Pi incorporates a hardware watchdog timer that can be used to reboot the Raspberry Pi in the case of a software or hardware lockup. The watchdog timer is enabled by default and can be disabled with a solder jumper if needed. When enabled, the watchdog timer will restart the Raspberry Pi if it doesn't receive a "heartbeat" signal from the Raspberry Pi within a predetermined time interval (typically 10 seconds).
+In addition to the power supply, the Sailor Hat for Raspberry Pi incorporates a hardware watchdog timer that can be used to reboot the Raspberry Pi in the case of a software or hardware lockup. The watchdog timer is enabled by default and can be disabled by applying the command `shrpi set watchdog 0` on the device command line if needed. When enabled, the watchdog timer will restart the Raspberry Pi if it doesn't receive a "heartbeat" signal from the Raspberry Pi within a predetermined time interval (typically 10 seconds).
 
 The Raspberry Pi must run a service that sends a periodic heartbeat signal to the SH-RPi. The service can be installed from the provided software package.
 
@@ -159,7 +159,7 @@ To use the RTC, a CR1220 backup battery must be installed on the bottom side of 
 When using the SH-RPi board with a built-in RTC, the RTCs may have conflicting I2C addresses.
 In such a case, the RTC on the SH-RPi can be disabled by cutting the traces between the RTC EN solder jumper pads.
 
-## Configuration
+## Hardware Configuration
 
 The Sailor Hat for Raspberry Pi can be configured by the user to adapt to specific use cases. Configuration options include:
 
@@ -167,14 +167,12 @@ The Sailor Hat for Raspberry Pi can be configured by the user to adapt to specif
    The input current limiter can be set to 0.8 A (default), 1.8 A, or 2.8 A by placing jumpers on the current limiter header.
 2. Real-time clock enable.
    The RTC can be enabled or disabled with a solder jumper.
-3. Watchdog timer enable.
-   The watchdog timer can be enabled or disabled with a solder jumper.
-4. GPIO4 enable.
+3. GPIO4 enable.
    Connect the pads to connect Raspberry Pi GPIO4 to the onboard microcontroller port PB5. This requires custom firmware functionality to be useful.
 
 ## I2C
 
-Sailor Hat communicates with the Raspberry Pi 
+Sailor Hat communicates with the Raspberry Pi
 using I2C bus 1 on GPIO pins 3 and 5. (GPIO2 and GPIO3, respectively).
 The I2C address is 0x6d.
 
