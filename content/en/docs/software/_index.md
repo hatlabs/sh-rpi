@@ -72,6 +72,34 @@ That's it! After a reboot, the daemon will start automatically.
 
 *Note: The Automated installation script described in the [Getting Started Section](../getting-started/) will perform all software installation steps described above automatically.*
 
+### Daemon Configuration File
+
+You can configure the daemon settings by creating and editing the configuration file `/etc/shrpid.conf`.
+The file uses YAML formatting.
+The following options are available:
+
+```yaml
+# I2C bus number. You should never need to change this.
+i2c-bus: 1
+# I2C address of the SH-RPi. Only change this if you have custom firmware.
+i2c-addr: 0x6d
+# Maximum allowed blackout duration before shutdown.
+blackout-time-limit: 3.0
+# Input voltage limit for blackout detection.
+blackout-voltage-limit: 9.0
+# Socket file for the REST API. You should never need to change this.
+socket: /var/run/shrpid.sock
+# Group for the socket file. You should never need to change this.
+socket-group: adm
+# Command used to initiate a shutdown. Replace this with a custom script
+# to customize the shutdown behavior.
+poweroff: /sbin/poweroff
+```
+
+You can create a new configuration file by running `nano /etc/shrpid.conf` and pasting the above content into the file.
+Comment out any lines you don't want to change.
+Save the file by pressing Ctrl-O and exit Nano by pressing Ctrl-X.
+
 ## Command-line Interface
 
 The command-line interface is a Python script that can be used to control the Sailor Hat for Raspberry Pi from the Raspberry Pi command line. It is installed by the installation script described in the [Getting Started Section](../getting-started/).
@@ -153,7 +181,7 @@ On Bluetooth-enabled Pis, the UART is normally reserved by the onboard Bluetooth
 
 Add the following lines at the end of `/boot/firmware/config.txt`:
 
-``ìni
+```ìni
 dtoverlay=disable-bt
 dtoverlay=uart5
 ```
