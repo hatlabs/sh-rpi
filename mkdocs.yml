@@ -1,0 +1,92 @@
+site_name: Sailor Hat for Raspberry Pi
+site_url: https://docs.hatlabs.fi/sh-rpi
+site_description: Documentation for Sailor Hat for Raspberry Pi (SH-RPi), a power management board for Raspberry Pi
+site_author: Hat Labs
+
+repo_url: https://github.com/hatlabs/SH-RPi
+repo_name: hatlabs/SH-RPi
+edit_uri: edit/main/sh-rpi-docs/docs/
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+  logo: assets/hat_labs_logo.svg
+  favicon: assets/hat_labs_logo.svg
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.action.edit
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - md_in_html
+  - footnotes
+  - toc:
+      permalink: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/hatlabs
+
+nav:
+  - Introduction: index.md
+  - Getting Started: getting-started/index.md
+  - Hardware:
+    - Hardware Description: hardware/index.md
+  - Software:
+    - Software: software/index.md
+  - FAQ: faq/index.md
+  - Hardware Revisions: revisions/index.md
+  - Errata: errata/index.md
+  - Add-on Hardware:
+    - Overview: add-ons/index.md
+    - Compute Module 4: add-ons/cm4/index.md
+    - CAN HAT: add-ons/can-hat/index.md
+    - RS485 HAT: add-ons/rs485-hat/index.md
+    - GNSS HAT: add-ons/gnss-hat/index.md
+  - Tutorials:
+    - Overview: tutorials/index.md
+    - OpenPlotter Server: tutorials/openplotter-server/index.md

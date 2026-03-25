@@ -1,4 +1,4 @@
-/public
-resources/
+site/
+.venv/
+__pycache__/
 node_modules/
-.hugo_build.lock
