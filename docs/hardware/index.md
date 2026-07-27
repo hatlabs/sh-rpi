@@ -2,6 +2,8 @@
 title: Hardware Description
 ---
 
+# Hardware Description
+
 ## Tour Around the Board
 
 Different functional blocks of the Sailor Hat for Raspberry Pi are described below.

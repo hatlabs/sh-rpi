@@ -2,6 +2,8 @@
 title: Waveshare 2-Channel Isolated CAN HAT
 ---
 
+# CAN HAT
+
 The Waveshare 2-Channel Isolated CAN HAT provides two isolated CAN interfaces for the Raspberry Pi. The CAN HAT is based on the MCP2515 CAN controller and SI65HVD230/SN65HVD230 CAN transceivers. The HAT can be used to implement a single compliant NMEA 2000 interface or two other CAN interfaces. When used as an NMEA 2000 interface, the second channel should be unused due to NMEA 2000 isolation requirements.
 
 The HAT has an integrated isolated DC/DC transformer and doesn't require external power input.

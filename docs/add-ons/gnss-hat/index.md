@@ -2,6 +2,8 @@
 title: Waveshare MAX-M8Q GNSS HAT
 ---
 
+# GNSS HAT
+
 The Waveshare MAX-M8Q GNSS HAT provides a high-quality GNSS receiver for the Raspberry Pi, based on the U-blox MAX-M8Q module. MAX-M8Q features a multi-constellation GNSS receiver with a high sensitivity of -167 dBm. It supports GPS, GLONASS, BeiDou and Galileo and can receive concurrently from three of these. Additionally, several augmentation schemes such as SBAS, QZSS, IMES and D-GPS are supported.
 
 This page describes the installation and configuration of the GNSS HAT when used together with the Sailor Hat for Raspberry Pi. For further details on the GNSS HAT, see the [Waveshare wiki page](https://www.waveshare.com/wiki/MAX-M8Q_GNSS_HAT).

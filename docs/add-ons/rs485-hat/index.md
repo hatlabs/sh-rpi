@@ -2,6 +2,8 @@
 title: Waveshare 2-Channel Isolated RS485 HAT
 ---
 
+# RS485 HAT
+
 The Waveshare 2-Channel Isolated RS485 HAT provides two isolated RS-485 interfaces for the Raspberry Pi. It can be used to implement a bidirectional NMEA 0183 interface or two generic bidirectional RS-485 interfaces. When used as an NMEA 0183 interface, one channel is used for receiving and the other for transmitting data.
 
 The HAT has an integrated isolated DC/DC transformer and doesn't require external power input.
