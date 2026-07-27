@@ -2,6 +2,8 @@
 title: Introduction
 ---
 
+# Introduction
+
 !!! info
     Looking for the old Sailor Hat for Raspberry Pi v1.0.0 documentation? It's available at [docs.hatlabs.fi/sh-rpi-v1](https://docs.hatlabs.fi/sh-rpi-v1/).
 

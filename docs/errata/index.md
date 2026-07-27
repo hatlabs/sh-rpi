@@ -2,6 +2,8 @@
 title: Errata
 ---
 
+# Errata
+
 This page lists all known hardware bugs for different SH-RPi revisions.
 
 ## Version 2.0.0

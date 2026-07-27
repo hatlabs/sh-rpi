@@ -2,6 +2,8 @@
 title: Compute Module 4
 ---
 
+# Compute Module 4
+
 The [Compute Module 4](https://www.raspberrypi.org/products/compute-module-4/) is a small form factor computer module that plugs into a carrier board. Providing CPU performance identical to the Raspberry Pi 4B,tThe CM4 is a powerful, flexible, and low-cost solution for embedded applications. When building embedded computers, the CM4 has several advantages over the Raspberry Pi 4B:
 
 - Built-in eMMC flash memory: The CM4 boards have, depending on the model, up to 32 GB of eMMC flash memory. This memory is both more reliable and faster than the SD card used in the Raspberry Pi 4B.

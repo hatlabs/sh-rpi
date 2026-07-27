@@ -2,6 +2,8 @@
 title: Getting Started
 ---
 
+# Getting Started
+
 ## Hardware Assembly
 
 SH-RPi is delivered fully assembled. The hardware installation steps are:
