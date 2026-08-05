@@ -1,6 +1,6 @@
 ---
 title: Compute Module 4
-translated_from: f89a90c51f25ee5de82bd29c9a81e54641af9ea1
+translated_from: 2769961d8eba6a0a776d8bf6566816716c7c9cac
 ---
 
 # Compute Module 4
