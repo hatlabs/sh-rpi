@@ -1,5 +1,6 @@
 ---
 title: Waveshare MAX-M8Q GNSS HAT
+translated_from: 94d29c50a654fad026d00f597a18d7b0d3625d85
 ---
 
 # GNSS HAT

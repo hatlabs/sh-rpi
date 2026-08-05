@@ -1,5 +1,6 @@
 ---
 title: Tunnetut virheet
+translated_from: c69dddee564cdf6ed10d77992eb6fe5f0c729699
 ---
 
 # Tunnetut virheet

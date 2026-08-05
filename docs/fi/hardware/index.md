@@ -1,5 +1,6 @@
 ---
 title: Laitteiston kuvaus
+translated_from: 257eeaa16d90da32404917c6093ffa709b5400f8
 ---
 
 # Laitteiston kuvaus
@@ -43,7 +44,7 @@ Sailor Hat for Raspberry Pi:n eri toiminnalliset lohkot kuvataan alla.
    Mikro-ohjain ohjaa hakkurin toimintaa. Mikro-ohjain kytkee boost-hakkurin päälle, kun superkondensaattorien jännite on noussut yli 8,0 V:n.
    Järjestelmän sammutuksen tai watchdog-uudelleenkäynnistyksen aikana mikro-ohjain kytkee boost-hakkurin pois päältä katkaistakseen Raspberry Pi:n käyttöjännitteen.
 6. Tila-LED-rivi.
-   Neljä tila-LEDiä osoittavat kortin toimintatilan siten kuin osiossa [Tila-LEDit](#status-leds) kuvataan.
+   Neljä tila-LEDiä osoittavat kortin toimintatilan siten kuin osiossa [Tila-LEDit](#tila-ledit) kuvataan.
 7. Reaaliaikakello.
    Kortilla on PCF8563-reaaliaikakello, joka pitää ajan tarkasti myös ilman internet- tai GPS-yhteyttä.
    Reaaliaikakello viestii Raspberry Pi:n kanssa I2C:n kautta.

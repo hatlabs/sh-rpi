@@ -1,5 +1,6 @@
 ---
 title: Usein kysytyt kysymykset
+translated_from: 6f552968db2af4b4fcbf3f6ca0ed8d741ed06f48
 ---
 
 # UKK

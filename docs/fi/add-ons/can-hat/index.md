@@ -1,5 +1,6 @@
 ---
 title: Waveshare 2-Channel Isolated CAN HAT
+translated_from: 91112523c75ae01ec3e4cdcdabdcff0fe5fdbd78
 ---
 
 # CAN HAT

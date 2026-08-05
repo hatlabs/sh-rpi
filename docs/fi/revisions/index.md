@@ -1,5 +1,6 @@
 ---
 title: Laitteistoversiot
+translated_from: 4629a1fb132d153d434e161cc52ed4f809e06c20
 ---
 
 # Laitteistoversiot

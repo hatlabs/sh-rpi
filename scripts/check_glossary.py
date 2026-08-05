@@ -44,10 +44,18 @@ SHORTEST_TERM = 5
 MIN_ENGLISH_USES = 2
 
 
-def read_pages(directory: Path) -> str:
-    """Concatenate a language's markdown with code and frontmatter removed."""
+def read_pages(directory: Path, only: set[str] | None = None) -> str:
+    """Concatenate a language's markdown with code and frontmatter removed.
+
+    `only` restricts the read to a set of paths relative to the directory. The
+    English side is read that way so that a page nobody has translated cannot
+    make its vocabulary look missing: asking whether a translation uses a
+    prescribed term is meaningful only for pages that were translated at all.
+    """
     out = []
     for page in sorted(directory.rglob("*.md")):
+        if only is not None and page.relative_to(directory).as_posix() not in only:
+            continue
         raw = page.read_text(encoding="utf-8")
         text = re.sub(r"^---\n.*?\n---\n", "", raw, flags=re.S)
         text = re.sub(r"```.*?```", " ", text, flags=re.S)
@@ -129,15 +137,23 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    english = read_pages(Path(args.docs) / "en")
-    translated = read_pages(Path(args.docs) / args.language)
+    target = Path(args.docs) / args.language
+    done = {p.relative_to(target).as_posix() for p in target.rglob("*.md")}
+    english = read_pages(Path(args.docs) / "en", only=done)
+    translated = read_pages(target)
     glossary = Path(args.glossaries) / GLOSSARIES[args.language]
 
     checked, unused = 0, []
     for source, target in terms(glossary):
-        wanted = [w for w in alternatives(source) if len(w) >= SHORTEST_TERM]
-        have = [h for h in alternatives(target) if len(h) >= SHORTEST_TERM]
+        wanted, have = alternatives(source), alternatives(target)
+        # A row may offer several renderings — `plus (+) / miinus (−)`. Dropping
+        # only the ones too short to match reliably would leave the row
+        # demanding the survivors, so a page using `plusnapa` and never needing
+        # the negative half reads as a violation. If any alternative is too
+        # short to judge, the whole row is.
         if not wanted or not have:
+            continue
+        if min(len(w) for w in wanted + have) < SHORTEST_TERM:
             continue
         uses = sum(english.count(w) for w in wanted)
         if uses < MIN_ENGLISH_USES:

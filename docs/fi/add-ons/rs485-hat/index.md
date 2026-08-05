@@ -1,5 +1,6 @@
 ---
 title: Waveshare 2-Channel Isolated RS485 HAT
+translated_from: 7f4b38c33361ca8118a3f68c596e0fb1633d6f5e
 ---
 
 # RS485 HAT

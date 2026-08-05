@@ -1,5 +1,6 @@
 ---
 title: Johdanto
+translated_from: 0ec24a83f9a21c842e78cd792ae3510e89df0e34
 ---
 
 # Johdanto
