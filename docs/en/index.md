@@ -31,4 +31,4 @@ Sailor Hat for Raspberry Pi is open hardware, licensed under the Creative Common
 
 ## Getting the Hardware
 
-You can purchase SH-RPi boards from [Hat Labs Ltd](https://shop.hatlabs.fi/products/sh-rpi). All design files are also available at the [SH-RPi hardware GitHub repository](https://github.com/hatlabs/sh-rpi-hardware/).
+You can purchase SH-RPi boards from [Hat Labs Oy](https://shop.hatlabs.fi/products/sh-rpi). All design files are also available at the [SH-RPi hardware GitHub repository](https://github.com/hatlabs/sh-rpi-hardware/).
