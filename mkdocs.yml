@@ -5,7 +5,7 @@ site_author: Hat Labs
 
 repo_url: https://github.com/hatlabs/SH-RPi
 repo_name: hatlabs/SH-RPi
-edit_uri: edit/main/sh-rpi-docs/docs/
+edit_uri: edit/main/docs/
 
 theme:
   name: material
@@ -30,11 +30,42 @@ theme:
 
 plugins:
   - search
-  - print-site:
-      add_cover_page: true
-      add_print_site_banner: true
-      add_to_navigation: false
-      print_page_title: "Sailor Hat for Raspberry Pi"
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: en
+          name: English
+          default: true
+          build: true
+        - locale: fi
+          name: Suomi
+          build: true
+          site_name: "Sailor Hat for Raspberry Pi"
+          site_description: SH-RPi:n käyttöopas — Raspberry Pi:n virranhallintakortti veneisiin
+          admonition_translations:
+            note: Huomio
+            warning: Varoitus
+            tip: Vinkki
+            info: Tietoa
+            danger: Vaara
+            example: Esimerkki
+          nav_translations:
+            Introduction: Johdanto
+            Getting Started: Aloitusopas
+            Hardware: Laitteisto
+            Hardware Description: Laitteiston kuvaus
+            Software: Ohjelmisto
+            FAQ: UKK
+            Hardware Revisions: Laitteistoversiot
+            Errata: Tunnetut virheet
+            Add-on Hardware: Lisälaitteet
+            Overview: Yleiskatsaus
+            Compute Module 4: Compute Module 4
+            CAN HAT: CAN HAT
+            RS485 HAT: RS485 HAT
+            GNSS HAT: GNSS HAT
+            Tutorials: Ohjeet
+            OpenPlotter Server: OpenPlotter-palvelin
 
 markdown_extensions:
   - admonition
