@@ -266,7 +266,7 @@ Kotelon voi kiinnittää seinään tai laipioon alla olevassa kuvassa näkyvist�
 
 Jos käytät koteloa, jossa ei ole valmiiksi porattuja reikiä, reiät on porattava itse.
 
-Vähintään tarvitset yhden reiän käyttöjännitteelle ja, metallikotelossa, toisen WiFi-antennille tai kiinteälle ethernetliittimelle.
+Vähintään tarvitset yhden reiän käyttöjännitteelle ja, metallikotelossa, toisen WiFi-antennille tai kiinteälle Ethernet-liittimelle.
 
 Suunnittele reikien ja liittimien sijoittelu suunnittelemasi asennuspaikan mukaan.
 Jos aiot asentaa kotelon seinälle, sijoita liittimet alaspäin, jotta veden pääsy sisään on mahdollisimman epätodennäköistä.

@@ -5,7 +5,7 @@ translated_from: 94d29c50a654fad026d00f597a18d7b0d3625d85
 
 # GNSS HAT
 
-Waveshare MAX-M8Q GNSS HAT tarjoaa Raspberry Pi:lle laadukkaan GNSS-vastaanottimen, joka perustuu U-bloxin MAX-M8Q-moduuliin. MAX-M8Q:ssa on usean satelliittijärjestelmän GNSS-vastaanotin, jonka herkkyys on korkea, -167 dBm. Se tukee GPS-, GLONASS-, BeiDou- ja Galileo-järjestelmiä ja voi vastaanottaa samanaikaisesti kolmesta niistä. Lisäksi se tukee useita tarkennusjärjestelmiä, kuten SBAS, QZSS, IMES ja D-GPS.
+Waveshare MAX-M8Q GNSS HAT tarjoaa Raspberry Pi:lle laadukkaan GNSS-vastaanottimen, joka perustuu U-bloxin MAX-M8Q-moduuliin. MAX-M8Q:ssa on usean satelliittijärjestelmän GNSS-vastaanotin, jonka herkkyys on korkea, −167 dBm. Se tukee GPS-, GLONASS-, BeiDou- ja Galileo-järjestelmiä ja voi vastaanottaa samanaikaisesti kolmesta niistä. Lisäksi se tukee useita tarkennusjärjestelmiä, kuten SBAS, QZSS, IMES ja D-GPS.
 
 Tällä sivulla kuvataan GNSS HATin asennus ja asetukset, kun sitä käytetään yhdessä Sailor Hat for Raspberry Pi:n kanssa. Lisätietoja GNSS HATista löytyy [Waveshare-wikisivulta](https://www.waveshare.com/wiki/MAX-M8Q_GNSS_HAT).
 

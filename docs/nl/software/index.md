@@ -124,7 +124,7 @@ Stelt verschillende configuratiewaarden in. Bijvoorbeeld:
 shrpi set led 50
 ```
 
-stelt de helderheid van de leds in op 50%.
+stelt de helderheid van de leds in op 50 %.
 
 ```bash
 shrpi sleep 3600
@@ -171,7 +171,7 @@ Het flashen gebeurt via de UPDI-interface van de ATtiny met [`avrdude`](https://
 Plaats jumpers op alle pinnen van de `PROG`-header, zoals in het rood aangegeven in de afbeelding hieronder. Daarmee worden de programmeerschakeling van de microcontroller en de seriële debuginterface met de Raspberry Pi verbonden. Bovendien wordt de 5 V-uitgang van de step-downcontroller geforceerd ingeschakeld, zodat de Raspberry Pi zichzelf niet uitschakelt bij het starten van het flashen.
 
 <figure markdown="span">
-![](SH-RPi-2.0.0-prog-conx.jpg){ width="50%" }
+![](SH-RPi-2.0.0-prog-conx.jpg){ width="50 %" }
 <figcaption>Plaats de rode jumpers om zelf flashen mogelijk te maken.</figcaption>
 </figure>
 

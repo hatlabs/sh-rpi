@@ -28,7 +28,7 @@ vervolgens op de 40-pins GPIO-pinheader van de Raspberry Pi of van de Sailor Hat
 Bij gebruik van de HAT met een NMEA 2000-interface mag alleen de interface CAN0 worden gebruikt. De interface CAN1 blijft onaangesloten. De afbeelding hieronder toont de bedrading voor de NMEA 2000-interface.
 
 <figure markdown="span">
-![](can_hat_wiring.jpg){ width="50%" }
+![](can_hat_wiring.jpg){ width="50 %" }
 <figcaption>Bedrading voor de NMEA 2000-interface. De rode ader blijft onaangesloten.</figcaption>
 </figure>
 
@@ -41,6 +41,6 @@ Met het installatiescript van de Sailor Hat kunt u de CAN-interface configureren
 Het is mogelijk de Raspberry Pi via de NMEA 2000-interface te voeden. Sluit daarvoor de voedings- en massa-aders van NMEA 2000 aan op de voedingsingang van de SH-RPi, en de aders H en L op de header CAN0 van de CAN HAT. Maak daarnaast een massaverbinding tussen de SH-RPi en de CAN HAT, zoals de afbeelding hieronder laat zien.
 
 <figure markdown="span">
-![](can_hat_n2k_power.jpg){ width="50%" }
+![](can_hat_n2k_power.jpg){ width="50 %" }
 <figcaption>Bedrading om de SH-RPi via de NMEA 2000-interface te voeden.</figcaption>
 </figure>

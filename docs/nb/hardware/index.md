@@ -86,7 +86,7 @@ De ulike funksjonsblokkene i Sailor Hat for Raspberry Pi er beskrevet nedenfor.
 5.  Pinneliste for strømbegrensning.
     Du kan sette jumpere på pinnelisten for strømbegrensning for å endre strømgrensen til 1,8 A eller 2,8 A (standard er 0,8 A).
     Sett en jumper vannrett på den øverste raden (merket 2A) for å sette strømgrensen til 1,8 A. Sett en jumper vannrett på den nederste raden (merket 3A) for å sette strømgrensen til 2,8 A.
-6.  Pinneliste for eksternt avbrudd. Ikke i bruk i v2.0.0-maskinvaren.
+6.  Pinneliste for eksternt avbrudd. Ikke funksjonell i v2.0.0-maskinvaren.
 7.  CR1220-batterikontakt for sanntidsklokken (på undersiden).
     Sanntidsklokken trenger et CR1220-reservebatteri for å holde tiden når systemet er slått av.
     Batteriet må vende med plusspolen (den flatere siden) bort fra kortet.

@@ -203,7 +203,7 @@ Käynnistä uudelleen, jotta muutokset tulevat voimaan.
 
 #### Flashausohjelmiston asennus
 
-[PlatformIO](https://platformio.org/) -kehyksen ansiosta kaikki tarvittavat työkalut voidaan ladata ja asentaa automaattisesti. Ensin on vain haettava
+[PlatformIO](https://platformio.org/)-kehyksen ansiosta kaikki tarvittavat työkalut voidaan ladata ja asentaa automaattisesti. Ensin on vain haettava
 firmwaren lähdekoodi. Asennetaan `git`-versionhallinta ja kloonataan firmwaren repositorio:
 
 ```bash

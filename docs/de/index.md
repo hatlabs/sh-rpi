@@ -10,7 +10,7 @@ translated_from: 0ec24a83f9a21c842e78cd792ae3510e89df0e34
 
 Der Sailor Hat for Raspberry Pi (SH-RPi) ist eine vielseitige Energieverwaltungsplatine für den Raspberry Pi und ähnliche Einplatinencomputer. Mit angeschlossenem SH-RPi lassen sich tief integrierte Server aufbauen, die beim Abschalten der Stromversorgung sicher herunterfahren und automatisch wieder starten, sobald die Spannung zurückkehrt.
 
-Der SH-RPi unterstützt alle Raspberry-Pi-Modelle mit einer 40-poligen GPIO-Stiftleiste (jedes Modell seit dem Pi 1 Model B+). Darüber hinaus ist er mit Raspberry Pi Compute Module 4 Platinen kompatibel sowie mit anderen Einplatinencomputern, die eine 40-polige Raspberry-Pi-kompatible GPIO-Stiftleiste oder eine externe I2C-Schnittstelle mit 5-V-Spannungsversorgung besitzen.
+Der SH-RPi unterstützt alle Raspberry-Pi-Modelle mit einer 40-poligen GPIO-Stiftleiste (jedes Modell seit dem Pi 1 Model B+). Darüber hinaus ist er mit Raspberry-Pi-Compute-Module-4-Platinen kompatibel sowie mit anderen Einplatinencomputern, die eine 40-polige Raspberry-Pi-kompatible GPIO-Stiftleiste oder eine externe I2C-Schnittstelle mit 5-V-Spannungsversorgung besitzen.
 
 <figure markdown="span">
 ![](shrpi_v2.0.0_top_render_ortho.jpg){ width="60%" }

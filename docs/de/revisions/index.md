@@ -14,7 +14,7 @@ Diese Seite dokumentiert die verschiedenen Platinenrevisionen und verlinkt die S
 
 Vollständig neu entwickelte Platine mit neuer Energieverwaltungsschaltung.
 
-- Standard-Formfaktor eines Raspberry Pi HAT
+- Standard-Formfaktor eines Raspberry-Pi-HAT
 - 3 × 20 F Superkondensatoren
 - Verbesserte Strombegrenzung
 - Verbesserte Ausgangsleistung

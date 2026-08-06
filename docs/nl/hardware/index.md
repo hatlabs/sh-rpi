@@ -97,7 +97,7 @@ Hieronder worden de verschillende functionele blokken van de Sailor Hat for Rasp
 
 ## Voeding
 
-De SH-RPi bevat een geïntegreerd voedingssysteem dat de Raspberry Pi van een schone voedingsspanning voorziet, ook vanaf een storingsgevoelige voedingsbron zoals een ongeregelde voeding of het “huishoud”-accusysteem van een boot. De voeding staat ingangsspanningen tussen 9–32 V toe, al wordt een spanning onder 10 V als onderspanningssituatie beschouwd om diepontladingsschade aan gangbare loodaccu's te voorkomen.
+De SH-RPi bevat een geïntegreerd voedingssysteem dat de Raspberry Pi van een schone voedingsspanning voorziet, ook vanaf een storingsrijke voedingsbron zoals een ongeregelde voeding of het “huishoud”-accusysteem van een boot. De voeding staat ingangsspanningen tussen 9–32 V toe, al wordt een spanning onder 10 V als onderspanningssituatie beschouwd om diepontladingsschade aan gangbare loodaccu's te voorkomen.
 
 De werking van het voedingssysteem is weergegeven in de afbeelding hieronder.
 

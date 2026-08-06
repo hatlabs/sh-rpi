@@ -227,7 +227,7 @@ upload_port = /dev/ttyAMA0
 monitor_port = /dev/ttyAMA1
 ```
 
-#### Flashing
+#### Programmazione
 
 Infine è possibile compilare e caricare il firmware. La prima volta che il comando viene eseguito, scarica e installa gli strumenti necessari. L’operazione può richiedere qualche minuto.
 
