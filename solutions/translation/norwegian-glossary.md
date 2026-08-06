@@ -655,7 +655,6 @@ distinguishable.
 | 3rd party (operating systems) | tredjeparter | The warning admonition at the top of ubuntu-installation.md. Spelled out as a word rather than kept as a digit, so the numeric-drift check will report |
 | errata / known hardware issues | kjente feil | Page title of appendices/errata.md. Taken from the nb nav_translations block in mkdocs.yml ("Errata": "Kjente feil") so the H1 and the sidebar agree,  |
 | mounting ledge | monteringsknast | The cast aluminium ledges inside the enclosure that the PCB rests on. Central to the second errata item (heading plus three prose mentions); knast is  |
-| flash (casting residue) | støpegrad | The sharp leftover aluminium from the casting process, set in quotes in the English source. Written as stopegrad (with o-slash) and kept inside Norweg |
 | solder mask | loddemaske | The PCB coating a casting flash can penetrate, in the errata short-circuit description. |
 | copper pour / power plane | kobberflate / spenningsplan | Both appear: copper pours in the v0.5.0 changelog and a 3,3 V power plane in errata. Kept apart because the errata text names the plane as a net, not  |
 | inrush current / initial current spike | startstrom | The errata compliance item turns on this quantity (1,1 A against the NMEA 2000 limit of 1 A), so it needed one fixed rendering rather than an ad-hoc p |

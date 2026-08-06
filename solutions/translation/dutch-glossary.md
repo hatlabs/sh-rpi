@@ -726,7 +726,6 @@ SH-RPi's own additions go under `## SH-RPi terms`, not here.
 | spudger | spudger | The non-conductive prying tool for the CM5. No Dutch equivalent in trade usage; the reader searching for one will search for *spudger*. |
 | guitar pick | plectrum | Listed alongside the spudger as an alternative tool. *Plectrum* is the ordinary Dutch word. |
 | to pry / to rock (a connector loose) | wrikken | Used for both the CM5 removal and the HAT removal ("gentle rocking motion"). One verb covers both senses in Dutch and keeps the two procedures reading |
-| Label (table column heading) | Aanduiding | Column head of the three connector tables and the LED table. *Label* exists in Dutch but reads as a sticker; *Aanduiding* matches how the German page  |
 | socket (hex tool) | dop / dopsleutel | The 26 mm / 10 mm / 8 mm / 17 mm sockets in the connector-removal step. Needed to be kept apart from *aansluiting*, which the glossary already uses fo |
 | surface-mounted component | SMD-component | The components near the CM5 connectors that metal tools can damage. SMD is the established Dutch trade abbreviation. |
 | countersunk screw | verzonken schroef | The four M4×10 lid screws. Matches the existing Dutch technical-reference page, which already writes "4× M4×10 verzonken, PH2-kop". |

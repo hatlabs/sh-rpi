@@ -687,7 +687,6 @@ here: `standoff`, `solder jumper`, `buck converter`, `brownout`, `power rail`,
 | threaded insert / countersunk / gasket | inserto roscado / avellanado / junta | Mechanical specifications table; none appear in the glossary's enclosure section. |
 | VDC (unit suffix, e.g. 32 VDC) | V CC | The glossary's units table covers V, A, Ω, °C, mm² but not the DC suffix. Spanish writes corriente continua, so the SI-spaced form is `32 V CC`. Appea |
 | mounting ledge | resalte de montaje | errata.md, twice. Distinct from `punto de montaje` (mounting point, design-files.md) and from `superficie de montaje` (mounting surface, already in th |
-| flash (casting defect, in quotes in the source) | rebaba | errata.md. The source quotes it as "flashes" and glosses it as leftover aluminium from casting. Standard Spanish foundry term. Written «rebabas» per r |
 | inrush current | corriente de irrupción | errata.md. The glossary has `overcurrent` → sobrecorriente and `current limiting` → limitación de corriente, but not the power-up surge. `corriente de |
 | copper pour / copper fill | vertido de cobre | design-files.md and errata.md. PCB-layout term; `relleno de cobre` used for the errata heading where the source says "Copper Fill", `vertidos de cobre |
 | power plane / rail | plano de alimentación / línea | errata.md (`3.3V power plane` → plano de alimentación de 3,3 V) and design-files.md (`3.3V rail` → la línea de 3,3 V). Kept distinct because the sourc |

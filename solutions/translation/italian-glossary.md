@@ -229,7 +229,6 @@ an article: `la porta USB`, `il bus I2C`, `il connettore RJ45`,
 | thermal pad | pad termico | |
 | standoff | distanziale | |
 | countersunk screw | vite svasata | |
-| socket (tool) | chiave a bussola | `chiave a bussola da 26 mm` |
 
 **`foro pilota` and `foro predisposto` are two different things.** The English
 source uses *pilot hole* for a hole the installer drills into the bulkhead, and
@@ -695,7 +694,6 @@ English term actually occurs.
 | Getting Started (page/guide title) | Guida introduttiva | H1 of the page and the link text to the equivalent guide. Standard Italian documentation title; 'Per iniziare' is the alternative but reads less well |
 | Step (numbered procedure heading) | Passaggio | Needed a fixed choice so headings do not alternate between 'Passaggio', 'Fase' and 'Punto' |
 | wire (individual conductor: red wire / black wire) | conduttore | The glossary covers 'wire gauge' and 'marine-grade wire' but not the countable conductor |
-| terminals (crimp-on ring/spade terminals) | capicorda | Distinct from 'morsettiera' (terminal block), which the glossary already fixes |
 | cable grommet | passacavo | Appears alongside 'cable gland' (pressacavo, in glossary); needed a different word so the pair does not collapse into one term |
 | mounting hardware (corrosion-resistant) | minuteria di fissaggio | Standard Italian for screws/washers/brackets as a class; a literal 'hardware di montaggio' would clash with 'hardware' used for electronics elsewhere |
 | mounting clips | clip di fissaggio | Kept parallel to 'minuteria di fissaggio' |

@@ -40,6 +40,8 @@ GLOSSARIES = {
 
 ROW = re.compile(r"^\| *`?([^|`]+?)`? *\| *`?([^|`]+?)`? *\|")
 SHORTEST_TERM = 5
+# Below this length a shared substring is more likely a compound than a clash.
+BOUNDARY_FROM = 8
 # An English term used once may be phrased around; twice is a pattern.
 MIN_ENGLISH_USES = 2
 
@@ -117,10 +119,19 @@ def inflectable(term: str) -> re.Pattern[str]:
     like `−32 V and +32 V` opens with a minus sign, and `\\b` before a non-word
     character asserts the opposite of what is meant — it would demand a letter
     immediately before the minus and match nothing.
+
+    It also only applies to terms long enough that a shared substring is
+    unlikely to be coincidence. A compounding language legitimately puts a short
+    common noun at the end of a compound — Danish `pakke` inside `salgspakke`
+    and `softwarepakke` is the same concept — so demanding a boundary there
+    reports correct prose as a violation. `virtalähde` at ten characters
+    appearing only inside `vakiovirtalähde` is a signal; `pakke` at five is not.
     """
     words = [re.escape(w[: max(3, len(w) - 3)]) + r"\w*" for w in fold(term).split()]
     body = r"(?:\W+\w+){0,2}\W+".join(words)
-    boundary = r"\b" if re.match(r"\w", fold(term)) else ""
+    folded = fold(term)
+    long_enough = len(folded.replace(" ", "")) >= BOUNDARY_FROM
+    boundary = r"\b" if long_enough and re.match(r"\w", folded) else ""
     return re.compile(boundary + body)
 
 
