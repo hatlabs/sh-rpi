@@ -195,9 +195,8 @@ them.
 
 | English | Finnish | Note |
 |:--------|:--------|:-----|
-| power supply (a unit) | virtalähde | The device that supplies power — `12 V:n virtalähde`, `USB-teholähde` when the unit is meant generically |
-| power source | virtalähde | Same word: in Finnish both English terms name the device. **This corrects an inherited row that had the two the wrong way round** — it prescribed `virransyöttö` here, which names the *feed*, not the source. |
-| power supply (the subsystem or the act of supplying) | virransyöttö | The function, not the box: `integroitu virransyöttöjärjestelmä`, `kun virransyöttö katkaistaan`. HALPI2's Finnish pages already use the pair this way; only the glossary rows were inverted. |
+| power supply | virtalähde | Matti Airas's call, shared with HALPI2: `virtalähde` renders *power supply*, `virransyöttö` renders *power source*. Do not swap them and do not introduce `teholähde` as a third word. |
+| power source | virransyöttö | See the row above.In an established compound the compound wins: *DC power source* is `tasavirtalähde`, since `tasavirransyöttö` is not a Finnish word. |
 | input voltage range | syöttöjännitealue | |
 | polarity | napaisuus | |
 | positive (+) / negative (−) | plus (+) / miinus (−) | |

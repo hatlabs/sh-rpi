@@ -23,15 +23,15 @@ SH-RPi toimitetaan täysin koottuna. Laitteiston asennusvaiheet ovat:
 !!! warning
     Älä koskaan kytke käyttöjännitettä 5 V:n lähtöliittimeen! Se vaurioittaa Raspberry Pi:n ja SH-RPi:n pysyvästi.
 
-Kytke 10–32 V:n virtalähde SH-RPi:n jännitetuloliittimeen alla olevan kuvan mukaisesti.
+Kytke 10–32 V:n virransyöttö SH-RPi:n jännitetuloliittimeen alla olevan kuvan mukaisesti.
 
 <figure markdown="span">
 ![](shrpi_power_input.jpg){ width="50%" }
-<figcaption>Kytke virtalähde vihreällä ympyröityyn liittimeen.</figcaption>
+<figcaption>Kytke virransyöttö vihreällä ympyröityyn liittimeen.</figcaption>
 </figure>
 
-Virtalähteen on kestettävä vähintään 1,0 A:n virta ilmoitetulla lähtöjännitteellä.
-Muiden tekijöiden ollessa samat suuremman lähtöjännitteen, kuten 24 V:n, teholähde tuottaa hieman tehokkaamman toiminnan.
+Virransyötön on kestettävä vähintään 1,0 A:n virta ilmoitetulla lähtöjännitteellä.
+Muiden tekijöiden ollessa samat suuremman lähtöjännitteen, kuten 24 V:n, virtalähde tuottaa hieman tehokkaamman toiminnan.
 Muuten veneiden ja ajoneuvojen 12 V:n järjestelmät tai tasavirtalähteet toimivat hyvin.
 
 ## Ohjelmiston asennus
