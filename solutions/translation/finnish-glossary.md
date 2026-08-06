@@ -195,8 +195,8 @@ them.
 
 | English | Finnish | Note |
 |:--------|:--------|:-----|
-| power supply | virtalähde | |
-| power source | virransyöttö | |
+| power supply | virtalähde | Matti Airas's call, shared with HALPI2: `virtalähde` renders *power supply*, `virransyöttö` renders *power source*. Do not swap them and do not introduce `teholähde` as a third word. |
+| power source | virransyöttö | See the row above.In an established compound the compound wins: *DC power source* is `tasavirtalähde`, since `tasavirransyöttö` is not a Finnish word. |
 | input voltage range | syöttöjännitealue | |
 | polarity | napaisuus | |
 | positive (+) / negative (−) | plus (+) / miinus (−) | |

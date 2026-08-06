@@ -25,7 +25,7 @@ Windowsille `rpiboot` on saatavilla valmiiksi käännettynä ohjelmana, mutta Li
 Huomioita asennusprosessista:
 
 1. eMMC:n flashaamiseksi emolevy on kytkettävä BOOT-tilaan. Waveshare CM4-IO-BASE -korteissa HDMI0-liittimen vieressä oleva pieni BOOT-kytkin on käännettävä ON-asentoon.
-2. Emolevy on kytkettävä ulkoiseen virtalähteeseen flashauksen ajaksi. Käytä siihen SH-RPi-korttia!
+2. Emolevy on kytkettävä ulkoiseen virransyöttöön flashauksen ajaksi. Käytä siihen SH-RPi-korttia!
 
 ### Windows
 

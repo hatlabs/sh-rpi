@@ -95,13 +95,13 @@ Sailor Hat for Raspberry Pi:n eri toiminnalliset lohkot kuvataan alla.
 9. GPIO4 Enable. Yhdistä juotospisteet, niin Raspberry Pi:n GPIO4 kytkeytyy kortin mikro-ohjaimen porttiin PB5.
    Tämä edellyttää räätälöityä firmwaren toiminnallisuutta ollakseen hyödyllinen.
 
-## Virransyöttö
+## Virtalähde
 
-SH-RPi:ssä on integroitu virransyöttöjärjestelmä, joka tuottaa Raspberry Pi:lle puhtaan käyttöjännitteen häiriöisestä lähteestä, kuten säätämättömästä teholähteestä tai veneen käyttöakustosta. Virransyöttö sallii 9–32 V:n syöttöjännitteet, joskin alle 10 V:n jännite tulkitaan alijännitetilanteeksi, jotta tyypilliset lyijyakut eivät vaurioidu syväpurkautumisesta.
+SH-RPi:ssä on integroitu virtalähdejärjestelmä, joka tuottaa Raspberry Pi:lle puhtaan käyttöjännitteen häiriöisestä lähteestä, kuten säätämättömästä virtalähteestä tai veneen käyttöakustosta. Virransyöttö sallii 9–32 V:n syöttöjännitteet, joskin alle 10 V:n jännite tulkitaan alijännitetilanteeksi, jotta tyypilliset lyijyakut eivät vaurioidu syväpurkautumisesta.
 
-Virransyöttöjärjestelmän toimintakaavio on esitetty alla olevassa kuvassa.
+Virtalähdejärjestelmän toimintakaavio on esitetty alla olevassa kuvassa.
 
-Suurinta tulovirtaa rajoitetaan syöttävien teholähteiden ja kaapeloinnin suojaamiseksi. Oletusvirtaraja on 0,8 A, mutta rajan voi nostaa 1,8 A:iin tai 2,8 A:iin asettamalla hyppyjä virranrajoittimen liittimeen.
+Suurinta tulovirtaa rajoitetaan syöttävien virtalähteiden ja kaapeloinnin suojaamiseksi. Oletusvirtaraja on 0,8 A, mutta rajan voi nostaa 1,8 A:iin tai 2,8 A:iin asettamalla hyppyjä virranrajoittimen liittimeen.
 
 Ensimmäisen vaiheen alentava hakkuri laskee syöttöjännitteen ja lataa superkondensaattoripankin 8,8 V:n jännitteeseen. Superkondensaattorit toimivat Raspberry Pi:n energiavarastona sekä lyhyiden häiriöiden aikana että viimeisenä virtalähteenä järjestelmän sammutuksen aikana.
 
@@ -109,11 +109,11 @@ Toisen vaiheen alentava hakkuri muuntaa superkondensaattorien jännitteen Raspbe
 
 Suurin hetkellinen lähtövirta Raspberry Pi:lle on 5 A. Suurin keskimääräinen lähtövirta riippuu tulovirran rajoitusasetuksesta ja ympäristön lämpötilasta. 0,8 A:n tulovirtarajalla suurin jatkuva lähtövirta on noin 1,4 A. 2,8 A:n tulovirtarajalla suurinta keskimääräistä lähtövirtaa rajoittaa järjestelmän lämpötalous. Avoimessa tilassa huoneenlämmössä suurin keskimääräinen 5 V:n lähtövirta on vähintään 3,0 A. Suuremmat arvot ovat mahdollisia jäähdyttämällä SH-RPi-korttia aktiivisesti.
 
-1,4 A:n lähtövirralla virransyötön kokonaishyötysuhde on 79 %.
+1,4 A:n lähtövirralla virtalähteen kokonaishyötysuhde on 79 %.
 
 <figure markdown="span">
 ![](psu_diagram.svg){ width="70%" }
-<figcaption>Virransyötön toimintakaavio esimerkkiarvoin virrasta ja jännitteestä.</figcaption>
+<figcaption>Virtalähteen toimintakaavio esimerkkiarvoin virrasta ja jännitteestä.</figcaption>
 </figure>
 
 ## Tila-LEDit
@@ -148,7 +148,7 @@ Tilojen yksityiskohtainen kuvaus:
 
 ## Watchdogin uudelleenkäynnistystoiminto
 
-Virransyötön lisäksi Sailor Hat for Raspberry Pi:ssä on laitteistopohjainen watchdog-ajastin, jolla Raspberry Pi voidaan käynnistää uudelleen ohjelmisto- tai laitteistojumin sattuessa. Watchdog-ajastin on oletuksena käytössä, ja sen voi tarvittaessa poistaa käytöstä komennolla `shrpi set watchdog 0` laitteen komentorivillä. Käytössä ollessaan watchdog-ajastin käynnistää Raspberry Pi:n uudelleen, jos se ei saa Raspberry Pi:ltä sykesignaalia ennalta määrätyn ajan kuluessa (tyypillisesti 10 sekuntia).
+Virtalähteen lisäksi Sailor Hat for Raspberry Pi:ssä on laitteistopohjainen watchdog-ajastin, jolla Raspberry Pi voidaan käynnistää uudelleen ohjelmisto- tai laitteistojumin sattuessa. Watchdog-ajastin on oletuksena käytössä, ja sen voi tarvittaessa poistaa käytöstä komennolla `shrpi set watchdog 0` laitteen komentorivillä. Käytössä ollessaan watchdog-ajastin käynnistää Raspberry Pi:n uudelleen, jos se ei saa Raspberry Pi:ltä sykesignaalia ennalta määrätyn ajan kuluessa (tyypillisesti 10 sekuntia).
 
 Raspberry Pi:ssä on ajettava palvelua, joka lähettää SH-RPi:lle säännöllisen sykesignaalin. Palvelun voi asentaa toimitetusta ohjelmistopaketista.
 

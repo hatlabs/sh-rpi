@@ -7,7 +7,7 @@ translated_from: 4629a1fb132d153d434e161cc52ed4f809e06c20
 
 ## Johdanto
 
-Tällä sivulla kuvataan kortin eri versiot ja tarjotaan linkit kytkentäkaavioihin. Suunnittelutiedostojen koko historia on saatavilla [SH-RPi-hardware -GitHub-repositoriossa](https://github.com/hatlabs/SH-RPi-hardware).
+Tällä sivulla kuvataan kortin eri versiot ja tarjotaan linkit kytkentäkaavioihin. Suunnittelutiedostojen koko historia on saatavilla [SH-RPi-hardware-GitHub-repositoriossa](https://github.com/hatlabs/SH-RPi-hardware).
 
 
 ## Versio 2.0.0
