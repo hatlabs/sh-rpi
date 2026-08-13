@@ -67,7 +67,7 @@ Read this section before anything else. Every one of these is stated the
 opposite way in at least one sibling glossary. Danish is the dangerous
 neighbour: it is close enough to read as correct and is being written against
 the same English source, so a Danish habit that slips in will not look wrong to
-anyone who is not counting. `scripts/check_glossary.py` already registers `da`
+anyone who is not counting. `check-glossary` already registers `da`
 alongside `nb`, and machine translation produces Danish-shaped Norwegian on its
 own, so the rule holds whether or not a Danish page exists yet.
 
@@ -546,14 +546,14 @@ in the stack; render that as `kortet under` rather than as either term above.
 A translated page is not done until:
 
 1. `uv run mkdocs build --strict` passes — the same command CI runs.
-2. `uv run python scripts/check_anchors.py site` passes.
-3. `uv run python scripts/translation_status.py` shows the page as current.
-4. `uv run python scripts/check_glossary.py nb` passes.
-5. `uv run python scripts/check_typography.py nb` passes.
+2. `uv run check-anchors site` passes.
+3. `uv run translation-status` shows the page as current.
+4. `uv run check-glossary nb` passes.
+5. `uv run check-typography nb` passes.
 6. Structure matches the source — see `.claude/skills/translate-page/SKILL.md`.
 7. Every term used on the page that appears in this glossary matches it.
 
-Both `check_glossary.py` and `check_typography.py` already register `nb`
+Both `check-glossary` and `check-typography` already register `nb`
 (`"nb": "norwegian-glossary.md"` and `"nb": ("«", "»")`), so no script change is
 needed before the first page — unlike in the HALPI2 repository, where the first
 translator had to add that line.
@@ -564,7 +564,7 @@ translator had to add that line.
 whatever it already says. Both the French and German branches shipped a
 half-applied typography rule to review for exactly this reason, and Danish is
 close enough to Norwegian that a leak from a parallel branch will read as fine.
-`check_typography.py nb` does the counting properly, with code fences stripped;
+`check-typography nb` does the counting properly, with code fences stripped;
 the greps below are for spot checks while writing. Act on any non-zero count.
 
 | Rule | Command | Expected |
@@ -606,7 +606,7 @@ typo. The last row is not optional.
 Inherited from the HALPI2 pages, where the page translators reported them and
 they were consolidated here rather than written by each of them. They are kept
 because the vocabulary is shared; a row whose English term does not occur in the
-SH-RPi pages simply goes unchecked by `check_glossary.py`. **New SH-RPi terms
+SH-RPi pages simply goes unchecked by `check-glossary`. **New SH-RPi terms
 belong under `## SH-RPi terms`**, not here, so the two products' additions stay
 distinguishable.
 

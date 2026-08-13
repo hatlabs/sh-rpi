@@ -572,10 +572,10 @@ prescribes for a proper name: `HAT-stikliste`, `CAN HAT-stiklisten`,
 A translated page is not done until:
 
 1. `uv run mkdocs build --strict` passes.
-2. `uv run python scripts/check_anchors.py site` passes.
-3. `uv run python scripts/translation_status.py` shows the page as current.
-4. `uv run python scripts/check_glossary.py da` passes.
-5. `uv run python scripts/check_typography.py da` passes.
+2. `uv run check-anchors site` passes.
+3. `uv run translation-status` shows the page as current.
+4. `uv run check-glossary da` passes.
+5. `uv run check-typography da` passes.
 6. Structure matches the source — see `.claude/skills/translate-page/SKILL.md`.
 7. Every number in the English text appears in the translation. A wrong voltage
    or current in an installation guide is a safety problem, not a typo.

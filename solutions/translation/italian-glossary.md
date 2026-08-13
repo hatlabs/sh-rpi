@@ -569,16 +569,14 @@ that inherits a known error. This glossary row is the record.
 A translated page is not done until:
 
 1. `uv run mkdocs build --strict` passes — the same command CI runs.
-2. `uv run python scripts/check_anchors.py site` passes.
-3. `uv run python scripts/check_typography.py it` passes. The script already
+2. `uv run check-anchors site` passes.
+3. `uv run check-typography it` passes. The script already
    knows Italian: `QUOTES["it"]` is `("“", "”")`, Italian is **not** in
    `SPACE_REQUIRED`, and it is not in `CHAINS_ALLOWED`, so rules 2, 3 and 4 are
    machine-checked.
-4. `uv run python scripts/check_glossary.py it` passes. `it` is already
-   registered in the `GLOSSARIES` dict as `italian-glossary.md`, so no change to
-   the script is needed — unlike the HALPI2 repository, where registering the
-   language was a prerequisite for the Italian branch.
-5. `uv run python scripts/translation_status.py` shows the page as current.
+4. `uv run check-glossary it` passes. The checker carries `it` and maps it to
+   `italian-glossary.md`, so this needs no setup.
+5. `uv run translation-status` shows the page as current.
 6. `uv run mkdocs serve` shows the page rendering correctly in the browser, with
    lists as lists (see
    `../best-practices/markdown-lists-need-blank-line-2026-05-16.md` — the
