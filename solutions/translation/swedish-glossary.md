@@ -441,11 +441,11 @@ numbers. Check which board the page is about before reaching for either word.
 A translated page is not done until:
 
 1. `uv run mkdocs build --strict` passes — the same command CI runs.
-2. `uv run python scripts/check_anchors.py site` passes.
-3. `uv run python scripts/check_glossary.py sv` passes — it reads the tables in
+2. `uv run check-anchors site` passes.
+3. `uv run check-glossary sv` passes — it reads the tables in
    this file, so a row added here is checked from then on.
-4. `uv run python scripts/check_typography.py sv` passes.
-5. `uv run python scripts/translation_status.py` shows the page as current.
+4. `uv run check-typography sv` passes.
+5. `uv run translation-status` shows the page as current.
 6. Every term used on the page that appears in this glossary matches it.
 7. **The four rules at the top are tested against the pages, not re-read.** A
    half-applied typography rule looks followed when you read it. Both the French

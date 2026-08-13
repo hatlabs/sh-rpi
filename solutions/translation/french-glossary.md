@@ -462,12 +462,12 @@ updated in the same change rather than looking like a translation error.
 A translated page is not done until:
 
 1. `uv run mkdocs build --strict` passes — the same command CI runs.
-2. `uv run python scripts/check_typography.py` passes for `fr`. French is the
+2. `uv run check-typography` passes for `fr`. French is the
    one language that *requires* the space before `; : ! ?`, and the checker
    knows it — a plain U+0020 there is reported.
-3. `uv run python scripts/check_glossary.py fr` passes: every term this glossary
+3. `uv run check-glossary fr` passes: every term this glossary
    prescribes and the English pages actually use appears in the French.
-4. `uv run python scripts/check_anchors.py site` passes.
+4. `uv run check-anchors site` passes.
 5. `uv run mkdocs serve` shows the page rendering correctly, with lists as lists
    — always leave a blank line before and after a list.
 6. Every term used on the page that appears in this glossary matches it.
@@ -475,6 +475,6 @@ A translated page is not done until:
 ## Related
 
 - `finnish-glossary.md` — the sibling glossary and the general approach
-- `../../scripts/check_glossary.py`, `../../scripts/check_typography.py` — the
+- `../../check-glossary`, `../../check-typography` — the
   two checks that read this file
 - mkdocs-static-i18n documentation: https://ultrabug.github.io/mkdocs-static-i18n/

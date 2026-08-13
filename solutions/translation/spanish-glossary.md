@@ -574,10 +574,10 @@ pages is exactly the drift this file exists to prevent.
 A translated page is not done until:
 
 1. `uv run mkdocs build --strict` passes — the same command CI runs.
-2. `uv run python scripts/check_anchors.py site` passes.
-3. `uv run python scripts/translation_status.py` shows the page as current.
-4. `uv run python scripts/check_glossary.py es` passes.
-5. `uv run python scripts/check_typography.py es` passes — it walks the `«…»`
+2. `uv run check-anchors site` passes.
+3. `uv run translation-status` shows the page as current.
+4. `uv run check-glossary es` passes.
+5. `uv run check-typography es` passes — it walks the `«…»`
    marks in order and measures the space-before-punctuation rule with code
    fences removed, which a naive grep cannot do.
 6. Structure matches the source — see `.claude/skills/translate-page/SKILL.md`.

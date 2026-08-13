@@ -595,13 +595,13 @@ the English does. `we` is not the informal address rule 1 forbids; `je` and
 A translated page is not done until:
 
 1. `uv run mkdocs build --strict` passes.
-2. `uv run python scripts/check_anchors.py site --base /sh-rpi/` passes. The
+2. `uv run check-anchors site --base /sh-rpi/` passes. The
    script's default `--base` is `/halpi2/`, which is wrong in this repository —
    `site_url` here ends in `/sh-rpi`, so pass it explicitly or every
    root-absolute link is reported as broken.
-3. `uv run python scripts/translation_status.py` shows the page as current.
-4. `uv run python scripts/check_glossary.py nl` passes.
-5. `uv run python scripts/check_typography.py nl` passes.
+3. `uv run translation-status` shows the page as current.
+4. `uv run check-glossary nl` passes.
+5. `uv run check-typography nl` passes.
 6. Structure matches the source — see `.claude/skills/translate-page/SKILL.md`.
 7. **The seven rules at the top are counted against the pages, not re-read.**
 
