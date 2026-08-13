@@ -475,6 +475,6 @@ A translated page is not done until:
 ## Related
 
 - `finnish-glossary.md` — the sibling glossary and the general approach
-- `../../check-glossary`, `../../check-typography` — the
-  two checks that read this file
+- `check-glossary`, `check-typography` — the two checks that read this file,
+  from the `halos-docs-tools` package
 - mkdocs-static-i18n documentation: https://ultrabug.github.io/mkdocs-static-i18n/
