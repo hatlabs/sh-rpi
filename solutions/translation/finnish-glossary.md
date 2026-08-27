@@ -380,3 +380,20 @@ A translated page is not done until:
 
 - `solutions/best-practices/markdown-lists-need-blank-line-2026-05-16.md`
 - mkdocs-static-i18n documentation: https://ultrabug.github.io/mkdocs-static-i18n/
+
+## Terms added during translation
+
+Recorded while translating `tutorials/openplotter-server/`, the only page in
+this repository with a full hardware-assembly walkthrough. None of these had an
+entry, and each one recurs across the soldering and drilling steps.
+
+| English | Translation | Note |
+|:--------|:------------|:-----|
+| solder cup | juotoskuppi | Liittimen nastan kuppi, joka täytetään tinalla ennen johtimen juottamista |
+| pigtail (pre-wired lead) | johdinsarja | JST XH -johdinsarja; ei *lettu* |
+| step drill bit | porrasterä | Erotettava tavallisesta metalliporanterästä, jolla reikä viimeistellään |
+| centre punch | merkkipuikko | Reiän keskipisteen merkitsemiseen ennen poraamista |
+| burr | purse | Monikko *purseet*; poraamisen jäljiltä reiän ympärillä |
+| self-tapping screw | itsekierteittävä ruuvi |  |
+| O-ring | O-rengas | Tiivistys liittimen ympärillä |
+| time-series database | aikasarjatietokanta | InfluxDB |
