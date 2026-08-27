@@ -487,9 +487,8 @@ entry, and each one recurs across the soldering and drilling steps.
 
 | English | Translation | Note |
 |:--------|:------------|:-----|
-| solder cup | cuvette | La cuvette de la broche, étamée avant de souder le fil |
+| solder cup | coupelle à souder | La coupelle de la broche, étamée avant de souder le fil. `cuvette` seul ne dit pas la fonction |
 | pigtail (pre-wired lead) | faisceau | Faisceau JST XH |
-| step drill bit | foret étagé | À distinguer du foret à métaux qui finit le trou |
 | centre punch | pointeau | Pour marquer le centre du trou avant perçage |
 | burr | bavure | Laissée autour du trou par le perçage |
 | self-tapping screw | vis autotaraudeuse |  |

@@ -743,8 +743,6 @@ entry, and each one recurs across the soldering and drilling steps.
 | English | Translation | Note |
 |:--------|:------------|:-----|
 | solder cup | copa | La copa del pin, que se estaña antes de soldar el cable |
-| pigtail (pre-wired lead) | latiguillo | Latiguillo JST XH |
-| step drill bit | broca escalonada | Distinta de la broca para metal que remata el agujero |
 | centre punch | granete | Para marcar el centro del agujero antes de taladrar |
 | burr | rebaba | Queda alrededor del agujero al taladrar |
 | self-tapping screw | tornillo autorroscante |  |

@@ -497,7 +497,6 @@ entry, and each one recurs across the soldering and drilling steps.
 |:--------|:------------|:-----|
 | solder cup | Lötkelch | Der Kelch im Anschlusspin, der vor dem Löten mit Lot gefüllt wird |
 | pigtail (pre-wired lead) | Kabelsatz | JST-XH-Kabelsatz |
-| step drill bit | Stufenbohrer | Vom Metallbohrer zu unterscheiden, der das Loch fertigstellt |
 | centre punch | Körner | Zum Markieren der Lochmitte vor dem Bohren |
 | burr | Grat | Entsteht beim Bohren rund um das Loch |
 | self-tapping screw | selbstschneidende Schraube |  |

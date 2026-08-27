@@ -1,6 +1,6 @@
 ---
 title: Installasjon av OpenPlotter-server
-translated_from: 3eb95fa3d5c4e946a6ee74c23585b9b432d39c4e
+translated_from: 69cd214b5911c56a3544b6ab748a0ad149ba04e9
 ---
 
 !!! warning
@@ -470,7 +470,7 @@ Panelredigereren ser litt travel ut, men grunntrinnene er greie.
 
 [![](assets/screenshots/54_panel_title.jpg){ width="50%" }](assets/screenshots/54_panel_title.jpg)
 
-Rediger spørringen. Velg først en måling i raden FROM. Deretter må du legge til en matematisk modifikator for å regne om måleenhetene (Grafana kjenner ikke særlig til enheter, så som standard vises dataene alltid i de SI-enhetene de er lagret i). For å komme fra kelvin til grader Celsius trekker du for eksempel fra -273.15. Eller for å gå fra m/s til knop ganger du med 3600 og deler på 1852.
+Rediger spørringen. Velg først en måling i raden FROM. Deretter må du legge til en matematisk modifikator for å regne om måleenhetene (Grafana kjenner ikke særlig til enheter, så som standard vises dataene alltid i de SI-enhetene de er lagret i). For å komme fra kelvin til grader Celsius trekker du for eksempel fra 273,15. Eller for å gå fra m/s til knop ganger du med 3600 og deler på 1852.
 
 Fullfør panelet ved å gi det en tittel og ta endringene i bruk.
 

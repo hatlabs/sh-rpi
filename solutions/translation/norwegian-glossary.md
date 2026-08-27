@@ -668,7 +668,6 @@ distinguishable.
 | layout | oppsett / oppbygning / plassering / kretskortlayout | Four senses the English word covers and Norwegian splits; they are not rivals and must not be harmonised. A set of items chosen from options is oppsett (standardoppsettet, tastaturoppsett, standardoppsettet med 40 pinner). How something is built up internally is oppbygning (the Intern oppbygning heading, and the carrier-board alt text Bærekortets oppbygning, oversiden). Where parts sit on a face is plassering (Kontaktplassering på HALPI2, the index.md alt text). PCB design files are kretskortlayout, the trade loan. |
 | solder cup | loddekopp | Koppen i kontaktpinnen som fylles med tinn før lodding |
 | pigtail (pre-wired lead) | ledningssett | JST XH-ledningssett |
-| step drill bit | trinnbor | Skilt fra metallboret som etterbehandler hullet |
 | centre punch | kjørner | For å merke av hullsenteret før boring |
 | burr | grad | Flertall *grader*; oppstår rundt hullet ved boring |
 | self-tapping screw | selvskjærende skrue |  |

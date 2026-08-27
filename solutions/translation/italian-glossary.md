@@ -769,7 +769,6 @@ English term actually occurs.
 | support (help from Hat Labs or the community) | assistenza | Rival-term resolution. Distinct from `supporto`, which stays for the capability sense — *external antenna support* is `supporto per antenne esterne` |
 | solder cup | coppetta | La coppetta del pin, stagnata prima di saldare il filo |
 | pigtail (pre-wired lead) | cablaggio | Cablaggio JST XH |
-| step drill bit | punta a gradini | Distinta dalla punta per metallo che rifinisce il foro |
 | centre punch | bulino | Per segnare il centro del foro prima di forare |
 | burr | bava | Plurale *bave*; lasciata dalla foratura attorno al foro |
 | self-tapping screw | vite autofilettante |  |

@@ -1,6 +1,6 @@
 ---
 title: Installation du serveur OpenPlotter
-translated_from: 3eb95fa3d5c4e946a6ee74c23585b9b432d39c4e
+translated_from: 69cd214b5911c56a3544b6ab748a0ad149ba04e9
 ---
 
 !!! warning
@@ -97,7 +97,7 @@ Une fois le gabarit terminé, marquez le point central sur le boîtier et scotch
 
 Pour percer avec précision, il est utile de marquer le centre des trous au pointeau (un clou pointu et un léger coup de marteau font aussi l'affaire).
 
-Percez des avant-trous avec un foret fin (3 mm environ). Utilisez ensuite un foret étagé pour les trous définitifs. Prenez votre temps et travaillez à vitesse lente. Les petits trous de cotes inhabituelles, comme celui de 6,5 mm, se terminent au foret à métaux du diamètre correspondant.
+Percez des avant-trous avec un foret fin (3 mm environ). Utilisez ensuite un foret étagé pour les trous définitifs. Prenez votre temps et travaillez à vitesse lente. Terminez les petits trous de cotes inhabituelles, comme celui de 6,5 mm, avec un foret à métaux du diamètre correspondant.
 
 Le perçage du plastique laisse beaucoup de bavures autour des trous. Elles s'enlèvent avec un couteau bien affûté.
 
@@ -114,11 +114,11 @@ Voici le résultat dans mon cas.
 ### Raccordement des fils au connecteur de panneau NMEA 2000
 
 Nous allons maintenant souder les faisceaux JST XH au connecteur de panneau NMEA 2000. La même approche vaut pour souder les connecteurs d'alimentation SP13 si vous préférez en utiliser un.
-Commençons par étamer les cuvettes du connecteur.
+Commençons par étamer les coupelles à souder du connecteur.
 
 <figure markdown="span">
 ![](assets/photos/021_soldered_cups.jpg){ width="50%" }
-<figcaption>Cuvettes étamées.</figcaption>
+<figcaption>Coupelles étamées.</figcaption>
 </figure>
 
 
@@ -470,7 +470,7 @@ L'éditeur de panneau paraît chargé, mais les étapes de base sont simples.
 
 [![](assets/screenshots/54_panel_title.jpg){ width="50%" }](assets/screenshots/54_panel_title.jpg)
 
-Modifiez la requête. Sélectionnez d'abord une mesure dans la ligne FROM. Ensuite, vous devez ajouter un opérateur mathématique pour convertir les unités de mesure (Grafana ne connaît guère les unités : par défaut, il affiche toujours les données dans les unités SI où elles sont stockées). Par exemple, pour passer des kelvins aux degrés Celsius, il faut soustraire -273.15. Ou, pour passer des m/s aux nœuds, multiplier par 3600 et diviser par 1852.
+Modifiez la requête. Sélectionnez d'abord une mesure dans la ligne FROM. Ensuite, vous devez ajouter un opérateur mathématique pour convertir les unités de mesure (Grafana ne connaît guère les unités : par défaut, il affiche toujours les données dans les unités SI où elles sont stockées). Par exemple, pour passer des kelvins aux degrés Celsius, il faut soustraire 273,15. Ou, pour passer des m/s aux nœuds, multiplier par 3600 et diviser par 1852.
 
 Terminez le panneau en lui donnant un titre et en appliquant les modifications.
 

@@ -473,7 +473,6 @@ entry, and each one recurs across the soldering and drilling steps.
 |:--------|:------------|:-----|
 | solder cup | lödkopp | Koppen i kontaktstiftet som fylls med tenn före lödning |
 | pigtail (pre-wired lead) | kablage | JST XH-kablage |
-| step drill bit | stegborr | Skiljs från metallborret som efterbearbetar hålet |
 | centre punch | körnare | För att märka ut hålcentrum före borrning |
 | burr | grad | Plural *grader*; uppstår runt hålet vid borrning |
 | self-tapping screw | självgängande skruv |  |

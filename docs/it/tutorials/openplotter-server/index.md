@@ -1,6 +1,6 @@
 ---
 title: Installazione del server OpenPlotter
-translated_from: 3eb95fa3d5c4e946a6ee74c23585b9b432d39c4e
+translated_from: 69cd214b5911c56a3544b6ab748a0ad149ba04e9
 ---
 
 !!! warning
@@ -470,7 +470,7 @@ L’editor dei pannelli sembra affollato, ma i passaggi di base sono lineari.
 
 [![](assets/screenshots/54_panel_title.jpg){ width="50%" }](assets/screenshots/54_panel_title.jpg)
 
-Modificare la query. Selezionare prima una misura nella riga FROM. In secondo luogo va aggiunto un operatore matematico per convertire le unità di misura (Grafana non conosce granché le unità, quindi per impostazione predefinita mostra sempre i dati nelle unità SI in cui sono memorizzati). Per esempio, per passare dai kelvin ai gradi Celsius bisogna sottrarre -273.15. Oppure, per passare da m/s ai nodi, moltiplicare per 3600 e dividere per 1852.
+Modificare la query. Selezionare prima una misura nella riga FROM. In secondo luogo va aggiunto un operatore matematico per convertire le unità di misura (Grafana non conosce granché le unità, quindi per impostazione predefinita mostra sempre i dati nelle unità SI in cui sono memorizzati). Per esempio, per passare dai kelvin ai gradi Celsius bisogna sottrarre 273,15. Oppure, per passare da m/s ai nodi, moltiplicare per 3600 e dividere per 1852.
 
 Completare il pannello dandogli un titolo e applicando le modifiche.
 

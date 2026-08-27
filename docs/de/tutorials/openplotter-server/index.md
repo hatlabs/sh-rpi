@@ -1,6 +1,6 @@
 ---
 title: Installation des OpenPlotter-Servers
-translated_from: 3eb95fa3d5c4e946a6ee74c23585b9b432d39c4e
+translated_from: 69cd214b5911c56a3544b6ab748a0ad149ba04e9
 ---
 
 !!! warning
@@ -470,7 +470,7 @@ Der Panel-Editor wirkt etwas unübersichtlich, die grundlegenden Schritte sind a
 
 [![](assets/screenshots/54_panel_title.jpg){ width="50%" }](assets/screenshots/54_panel_title.jpg)
 
-Bearbeiten Sie die Abfrage. Wählen Sie zuerst in der Zeile FROM einen Messwert. Zweitens müssen Sie einen Rechenoperator hinzufügen, um die Messeinheiten umzurechnen (Grafana kennt Einheiten kaum, zeigt die Daten also standardmäßig immer in den SI-Einheiten an, in denen sie gespeichert sind). Um zum Beispiel von Kelvin auf Grad Celsius zu kommen, müssen Sie -273.15 abziehen. Oder um von m/s auf kn zu kommen, multiplizieren Sie mit 3600 und teilen durch 1852.
+Bearbeiten Sie die Abfrage. Wählen Sie zuerst in der Zeile FROM einen Messwert. Zweitens müssen Sie einen Rechenoperator hinzufügen, um die Messeinheiten umzurechnen (Grafana kennt Einheiten kaum, zeigt die Daten also standardmäßig immer in den SI-Einheiten an, in denen sie gespeichert sind). Um zum Beispiel von Kelvin auf Grad Celsius zu kommen, müssen Sie 273,15 abziehen. Oder um von m/s auf kn zu kommen, multiplizieren Sie mit 3600 und teilen durch 1852.
 
 Vollenden Sie die Anzeige, indem Sie ihr einen Titel geben und die Änderungen übernehmen.
 

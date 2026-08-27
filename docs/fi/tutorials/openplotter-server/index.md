@@ -1,6 +1,6 @@
 ---
 title: OpenPlotter-palvelimen asennus
-translated_from: 3eb95fa3d5c4e946a6ee74c23585b9b432d39c4e
+translated_from: 69cd214b5911c56a3544b6ab748a0ad149ba04e9
 ---
 
 !!! warning
@@ -470,7 +470,7 @@ Paneelieditori näyttää hieman työläältä, mutta perusvaiheet ovat suoravii
 
 [![](assets/screenshots/54_panel_title.jpg){ width="50%" }](assets/screenshots/54_panel_title.jpg)
 
-Muokkaa kyselyä. Valitse ensin mittaus FROM-riviltä. Toiseksi pitää lisätä laskutoimitus mittayksiköiden muuntamiseksi (Grafana ei juuri tunne yksiköitä, joten oletuksena se näyttää datan aina niissä SI-yksiköissä, joissa se on tallennettu). Esimerkiksi kelvineistä celsiusasteisiin päästään vähentämällä -273.15. Tai metreistä sekunnissa solmuiksi kertomalla luvulla 3600 ja jakamalla luvulla 1852.
+Muokkaa kyselyä. Valitse ensin mittaus FROM-riviltä. Toiseksi pitää lisätä laskutoimitus mittayksiköiden muuntamiseksi (Grafana ei juuri tunne yksiköitä, joten oletuksena se näyttää datan aina niissä SI-yksiköissä, joissa se on tallennettu). Esimerkiksi kelvineistä celsiusasteisiin päästään vähentämällä 273,15. Tai metreistä sekunnissa solmuiksi kertomalla luvulla 3600 ja jakamalla luvulla 1852.
 
 Viimeistele paneeli antamalla sille otsikko ja ottamalla muutokset käyttöön.
 

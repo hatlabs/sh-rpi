@@ -1,6 +1,6 @@
 ---
 title: OpenPlotter-server installeren
-translated_from: 3eb95fa3d5c4e946a6ee74c23585b9b432d39c4e
+translated_from: 69cd214b5911c56a3544b6ab748a0ad149ba04e9
 ---
 
 !!! warning
@@ -411,7 +411,7 @@ Naast het standaard Instrument Panel zijn er veel heel mooie dashboardtoepassing
 
 ### InfluxDB en Grafana installeren
 
-In de laatste stappen van deze handleiding installeren en configureren we InfluxDB en Grafana om een historisch logboek en visualisaties van de bootgegevens te maken. Het zijn nog een paar stappen en enkele drukogende schermen, maar die kleine moeite is het waard!
+In de laatste stappen van deze handleiding installeren en configureren we InfluxDB en Grafana om een historisch logboek en visualisaties van de bootgegevens te maken. Het zijn nog een paar stappen en enkele schermen die er druk uitzien, maar die kleine moeite is het waard!
 
 InfluxDB is een tijdreeksdatabase waarin we de gegevens opslaan. Grafana is een visualisatiegereedschap dat vaak wordt gebruikt om de gezondheid van IT-systemen te bewaken, maar dat dankzij zijn veelzijdigheid ook prima geschikt is voor onze maritieme gegevens.
 
@@ -470,7 +470,7 @@ De paneeleditor oogt wat druk, maar de basisstappen zijn eenvoudig.
 
 [![](assets/screenshots/54_panel_title.jpg){ width="50%" }](assets/screenshots/54_panel_title.jpg)
 
-Bewerk de query. Kies eerst een meting op de regel FROM. Ten tweede moet u een rekenkundige bewerking toevoegen om de meeteenheden om te rekenen (Grafana kent eenheden nauwelijks, dus standaard toont het de gegevens altijd in de SI-eenheden waarin ze zijn opgeslagen). Om bijvoorbeeld van kelvin naar graden Celsius te komen, moet u -273.15 aftrekken. Of om van m/s naar kn te gaan, vermenigvuldigt u met 3600 en deelt u door 1852.
+Bewerk de query. Kies eerst een meting op de regel FROM. Ten tweede moet u een rekenkundige bewerking toevoegen om de meeteenheden om te rekenen (Grafana kent eenheden nauwelijks, dus standaard toont het de gegevens altijd in de SI-eenheden waarin ze zijn opgeslagen). Om bijvoorbeeld van kelvin naar graden Celsius te komen, moet u 273,15 aftrekken. Of om van m/s naar kn te gaan, vermenigvuldigt u met 3600 en deelt u door 1852.
 
 Rond het paneel af door het een titel te geven en de wijzigingen toe te passen.
 

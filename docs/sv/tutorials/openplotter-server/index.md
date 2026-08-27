@@ -1,6 +1,6 @@
 ---
 title: Installation av OpenPlotter-server
-translated_from: 3eb95fa3d5c4e946a6ee74c23585b9b432d39c4e
+translated_from: 69cd214b5911c56a3544b6ab748a0ad149ba04e9
 ---
 
 !!! warning
@@ -97,7 +97,7 @@ När mallen är klar markerar du centrumpunkten på kapslingen och tejpar fast m
 
 För att borra exakt hjälper det att märka ut hålens centrum med en körnare (en vass spik och ett lätt slag med hammaren fungerar också).
 
-Borra styrhål med ett litet borr (omkring 3 mm). Använd sedan ett stegborr för de slutliga hålen. Ta det lugnt och håll låg varvtal. Mindre hål med udda mått, som det på 6,5 mm, bör efterbearbetas med ett metallborr i motsvarande storlek.
+Borra styrhål med ett litet borr (omkring 3 mm). Använd sedan ett stegborr för de slutliga hålen. Ta det lugnt och håll lågt varvtal. Mindre hål med udda mått, som det på 6,5 mm, bör efterbearbetas med ett metallborr i motsvarande storlek.
 
 Att borra i plast lämnar mycket grader runt hålen. De tar du bort med en vass kniv.
 
@@ -470,7 +470,7 @@ Paneleditorn ser lite rörig ut, men grundstegen är enkla.
 
 [![](assets/screenshots/54_panel_title.jpg){ width="50%" }](assets/screenshots/54_panel_title.jpg)
 
-Redigera frågan. Välj först en mätning på raden FROM. För det andra måste du lägga till en matematisk modifierare för att omvandla mätenheterna (Grafana känner inte riktigt till enheter, så som standard visas data alltid i de SI-enheter de lagras i). För att komma från kelvin till grader Celsius drar du till exempel bort -273.15. Eller för att gå från m/s till knop multiplicerar du med 3600 och dividerar med 1852.
+Redigera frågan. Välj först en mätning på raden FROM. För det andra måste du lägga till en matematisk modifierare för att omvandla mätenheterna (Grafana känner inte riktigt till enheter, så som standard visas data alltid i de SI-enheter de lagras i). För att komma från kelvin till grader Celsius drar du till exempel bort 273,15. Eller för att gå från m/s till knop multiplicerar du med 3600 och dividerar med 1852.
 
 Avsluta panelen genom att ge den en titel och tillämpa ändringarna.
 

@@ -763,7 +763,6 @@ entry, and each one recurs across the soldering and drilling steps.
 |:--------|:------------|:-----|
 | solder cup | soldeerkelk | De kelk in de connectorpin die vóór het solderen met tin wordt gevuld |
 | pigtail (pre-wired lead) | draadboom | JST XH-draadboom |
-| step drill bit | trapboor | Te onderscheiden van de metaalboor die het gat afwerkt |
 | centre punch | centerpons | Om het hart van het gat af te tekenen vóór het boren |
 | burr | braam | Meervoud *bramen*; ontstaat bij het boren rond het gat |
 | self-tapping screw | zelftappende schroef |  |

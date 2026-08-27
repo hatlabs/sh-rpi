@@ -1,6 +1,6 @@
 ---
 title: Instalación del servidor OpenPlotter
-translated_from: 3eb95fa3d5c4e946a6ee74c23585b9b432d39c4e
+translated_from: 69cd214b5911c56a3544b6ab748a0ad149ba04e9
 ---
 
 !!! warning
@@ -470,7 +470,7 @@ El editor de paneles resulta algo recargado, pero los pasos básicos son sencill
 
 [![](assets/screenshots/54_panel_title.jpg){ width="50%" }](assets/screenshots/54_panel_title.jpg)
 
-Editar la consulta. Seleccionar primero una medición en la fila FROM. En segundo lugar, hay que añadir un modificador matemático para convertir las unidades de medida (Grafana apenas conoce las unidades, así que de forma predeterminada muestra siempre los datos en las unidades del SI en las que están almacenados). Por ejemplo, para pasar de kelvin a grados Celsius hay que restar -273.15. O para pasar de m/s a nudos, multiplicar por 3600 y dividir por 1852.
+Editar la consulta. Seleccionar primero una medición en la fila FROM. En segundo lugar, hay que añadir un modificador matemático para convertir las unidades de medida (Grafana apenas conoce las unidades, así que de forma predeterminada muestra siempre los datos en las unidades del SI en las que están almacenados). Por ejemplo, para pasar de kelvin a grados Celsius hay que restar 273,15. O para pasar de m/s a nudos, multiplicar por 3600 y dividir por 1852.
 
 Terminar el panel dándole un título y aplicando los cambios.
 
