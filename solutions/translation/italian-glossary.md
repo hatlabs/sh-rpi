@@ -767,3 +767,10 @@ English term actually occurs.
 | current limit switch | limitatore di corrente | Rival-term resolution. One name only; refer back to it with a pronoun rather than a second noun. `interruttore` is reserved for circuit breakers and panel switches, `selettore` for the boot mode switch |
 | community | comunità | Rival-term resolution. `comunità` matches the impersonal manual register of rule 1 |
 | support (help from Hat Labs or the community) | assistenza | Rival-term resolution. Distinct from `supporto`, which stays for the capability sense — *external antenna support* is `supporto per antenne esterne` |
+| solder cup | coppetta | La coppetta del pin, stagnata prima di saldare il filo |
+| pigtail (pre-wired lead) | cablaggio | Cablaggio JST XH |
+| centre punch | bulino | Per segnare il centro del foro prima di forare |
+| burr | bava | Plurale *bave*; lasciata dalla foratura attorno al foro |
+| self-tapping screw | vite autofilettante |  |
+| O-ring | O-ring | Tenuta attorno al connettore. Invariabile |
+| time-series database | database di serie temporali | InfluxDB |

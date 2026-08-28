@@ -733,3 +733,18 @@ here: `standoff`, `solder jumper`, `buck converter`, `brownout`, `power rail`,
 | goodie bag | bolsa de accesorios | index.md, image alt text only. |
 | clean shutdown | apagado controlado | troubleshooting.md. The source varies its wording (`clean shutdown` here, `graceful shutdown` elsewhere) for one concept; Spanish keeps the single rendering the glossary already assigns to `graceful shutdown`. Not `apagado limpio`. |
 | power connector / power socket | conector de alimentación | The English source alternates the two words for the same E7T port; Spanish uses one. `toma` is reserved for nothing here — see `receptacle / socket` above for the connector-opening senses. |
+
+## Terms added during translation
+
+Recorded while translating `tutorials/openplotter-server/`, the only page in
+this repository with a full hardware-assembly walkthrough. None of these had an
+entry, and each one recurs across the soldering and drilling steps.
+
+| English | Translation | Note |
+|:--------|:------------|:-----|
+| solder cup | copa | La copa del pin, que se estaña antes de soldar el cable |
+| centre punch | granete | Para marcar el centro del agujero antes de taladrar |
+| burr | rebaba | Queda alrededor del agujero al taladrar |
+| self-tapping screw | tornillo autorroscante |  |
+| O-ring | junta tórica | Estanqueidad alrededor del conector |
+| time-series database | base de datos de series temporales | InfluxDB |

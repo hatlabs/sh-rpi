@@ -478,3 +478,19 @@ A translated page is not done until:
 - `../../scripts/check_glossary.py`, `../../scripts/check_typography.py` — the
   two checks that read this file
 - mkdocs-static-i18n documentation: https://ultrabug.github.io/mkdocs-static-i18n/
+
+## Terms added during translation
+
+Recorded while translating `tutorials/openplotter-server/`, the only page in
+this repository with a full hardware-assembly walkthrough. None of these had an
+entry, and each one recurs across the soldering and drilling steps.
+
+| English | Translation | Note |
+|:--------|:------------|:-----|
+| solder cup | coupelle à souder | La coupelle de la broche, étamée avant de souder le fil. `cuvette` seul ne dit pas la fonction |
+| pigtail (pre-wired lead) | faisceau | Faisceau JST XH |
+| centre punch | pointeau | Pour marquer le centre du trou avant perçage |
+| burr | bavure | Laissée autour du trou par le perçage |
+| self-tapping screw | vis autotaraudeuse |  |
+| O-ring | joint torique | Étanchéité autour du connecteur |
+| time-series database | base de données de séries temporelles | InfluxDB |

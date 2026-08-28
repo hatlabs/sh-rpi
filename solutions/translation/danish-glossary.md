@@ -710,4 +710,10 @@ pages too. Append SH-RPi's own discoveries to the same table, naming the page.
 | baud rate | baudhastighed | Consistency pass. 'baudrate' had appeared once in troubleshooting.md. 'baudhastighed' matches the other rate compounds already in use ('opdateringshastighed', 'datahastigheder'). |
 | repository (Git/GitHub) | repositorium (bestemt form: repositoriet) | Consistency pass. 'GitHub-arkivet' had appeared in design-files.md. 'arkiv' is reserved for the apt sense ('pakkearkiv'), so the source-code repository takes 'repositorium' — what Danish developers say. |
 | diagnostics / diagnostic | diagnostik | Consistency pass. 'diagnose' had appeared once in index.md. In Danish 'diagnose' is the result, 'diagnostik' the activity — the latter is what the source means. |
-</content>
+| solder cup | loddekop | Koppen i stikbenet, der fyldes med tin før lodning |
+| pigtail (pre-wired lead) | ledningssæt | JST XH-ledningssæt |
+| centre punch | kørner | Til at markere hullets centrum før boring |
+| burr | grat | Flertal *grater*; opstår rundt om hullet ved boring |
+| self-tapping screw | selvskærende skrue |  |
+| O-ring | O-ring | Tætning omkring stikket |
+| time-series database | tidsseriedatabase | InfluxDB |

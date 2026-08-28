@@ -486,3 +486,19 @@ A translated page is not done until:
 - `../../../halpi2/solutions/translation/german-glossary.md` — the base this file
   was copied from; shared rows change in both or in neither
 - mkdocs-static-i18n documentation: https://ultrabug.github.io/mkdocs-static-i18n/
+
+## Terms added during translation
+
+Recorded while translating `tutorials/openplotter-server/`, the only page in
+this repository with a full hardware-assembly walkthrough. None of these had an
+entry, and each one recurs across the soldering and drilling steps.
+
+| English | Translation | Note |
+|:--------|:------------|:-----|
+| solder cup | Lötkelch | Der Kelch im Anschlusspin, der vor dem Löten mit Lot gefüllt wird |
+| pigtail (pre-wired lead) | Kabelsatz | JST-XH-Kabelsatz |
+| centre punch | Körner | Zum Markieren der Lochmitte vor dem Bohren |
+| burr | Grat | Entsteht beim Bohren rund um das Loch |
+| self-tapping screw | selbstschneidende Schraube |  |
+| O-ring | O-Ring | Dichtung um den Anschluss |
+| time-series database | Zeitreihendatenbank | InfluxDB |

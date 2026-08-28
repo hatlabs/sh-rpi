@@ -469,7 +469,7 @@ The panel editor is a bit busy, but the basic steps are straightforward.
 
 [![](assets/screenshots/54_panel_title.jpg){ width="50%" }](assets/screenshots/54_panel_title.jpg)
 
-Edit the query. First, select a measurement in the FROM row. Second, you have to add a math modifier to convert the measurement units (Grafana isn't really unit-aware, so by default it always displays the data in the SI units they're stored in). For example, to get to degrees C from Kelvin you need to subtract -273.15. Or to get from m/s to kn, multiply by 3600 and divide by 1852.
+Edit the query. First, select a measurement in the FROM row. Second, you have to add a math modifier to convert the measurement units (Grafana isn't really unit-aware, so by default it always displays the data in the SI units they're stored in). For example, to get to degrees C from Kelvin you need to subtract 273.15. Or to get from m/s to kn, multiply by 3600 and divide by 1852.
 
 Finish the panel by giving it a title and applying the changes.
 

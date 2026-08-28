@@ -462,3 +462,19 @@ A translated page is not done until:
   file was copied from; shared rows change there too or not at all
 - `.claude/skills/translate-page/SKILL.md` — the procedure
 - mkdocs-static-i18n documentation: https://ultrabug.github.io/mkdocs-static-i18n/
+
+## Terms added during translation
+
+Recorded while translating `tutorials/openplotter-server/`, the only page in
+this repository with a full hardware-assembly walkthrough. None of these had an
+entry, and each one recurs across the soldering and drilling steps.
+
+| English | Translation | Note |
+|:--------|:------------|:-----|
+| solder cup | lödkopp | Koppen i kontaktstiftet som fylls med tenn före lödning |
+| pigtail (pre-wired lead) | kablage | JST XH-kablage |
+| centre punch | körnare | För att märka ut hålcentrum före borrning |
+| burr | grad | Plural *grader*; uppstår runt hålet vid borrning |
+| self-tapping screw | självgängande skruv |  |
+| O-ring | O-ring | Tätning runt kontakten |
+| time-series database | tidsseriedatabas | InfluxDB |

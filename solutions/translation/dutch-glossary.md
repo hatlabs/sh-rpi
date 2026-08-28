@@ -752,3 +752,19 @@ SH-RPi's own additions go under `## SH-RPi terms`, not here.
 | section (of this documentation) | onderdeel | Cross-references between pages: `in het onderdeel Toegang tot de behuizing`. Not *gedeelte* and not *sectie* — *sectie* is reserved for a section of a configuration file, e.g. the `[all]` section of `config.txt`. |
 | Ethernet port | ethernetaansluiting | The RJ45 socket on the carrier board and on the panel. It is a board-mounted socket, so the glossary's *aansluiting* branch applies; not *ethernetpoort*. Other ports stay *poort* (`USB-poort`, `HDMI-poort`, `seriële poort`). |
 | USB Boot connector | USB-bootconnector | Solid compound per rule 4, matching `USB-bootmodus` and `bootmodusschakelaar`. The silkscreen label itself stays verbatim and quoted: `de USB-C-connector met het opschrift “USB Boot”`. |
+
+## Terms added during translation
+
+Recorded while translating `tutorials/openplotter-server/`, the only page in
+this repository with a full hardware-assembly walkthrough. None of these had an
+entry, and each one recurs across the soldering and drilling steps.
+
+| English | Translation | Note |
+|:--------|:------------|:-----|
+| solder cup | soldeerkelk | De kelk in de connectorpin die vóór het solderen met tin wordt gevuld |
+| pigtail (pre-wired lead) | draadboom | JST XH-draadboom |
+| centre punch | centerpons | Om het hart van het gat af te tekenen vóór het boren |
+| burr | braam | Meervoud *bramen*; ontstaat bij het boren rond het gat |
+| self-tapping screw | zelftappende schroef |  |
+| O-ring | O-ring | Afdichting rond de connector |
+| time-series database | tijdreeksdatabase | InfluxDB |
