@@ -1,11 +1,9 @@
 name: Translation Status
 
 on:
+  # No paths filter: branch protection requires this job's check, and a
+  # filtered-out PR would never report it.
   pull_request:
-    paths:
-      - 'docs/**'
-      - 'mkdocs.yml'
-      - 'scripts/**'
   push:
     branches: [main]
   workflow_dispatch:
